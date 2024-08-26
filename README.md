@@ -24,6 +24,6 @@ ___
 
 <details><summary><h1>TODO</h1></summary>
 
-  - [ ] Add music.
+  - [x] Add music.
   - [ ] Make a web interface.
 </details>
