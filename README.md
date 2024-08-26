@@ -37,6 +37,7 @@ ___
 
   - [x] Add music.
   - [x] Make a web interface.
-  - [ ] Make a player.
+  - [x] Make a player.
   - [ ] Change the font.
+  - [ ] Add a search.
 </details>
