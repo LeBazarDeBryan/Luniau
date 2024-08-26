@@ -5,26 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luniau</title>
     <style>
-	  p, a, li {
-	    color: #ffffff;
-	  }
+        p, a, li {
+            color: #ffffff;
+        }
     </style>
 </head>
 <body style="background-color:#341d59;">
 <center>
-    <img src="logo.png" />
+    <img src="logo.png" alt="Logo"/>
     <ul id="file-list"></ul>
+    <audio id="audio-player" controls style="margin-top: 20px; background-color: #ffffff;">
+        <p>Votre navigateur ne prend pas en charge l'élément audio.</p>
+    </audio>
     <script>
         fetch('music.json')
             .then(response => response.json())
             .then(files => {
                 const fileList = document.getElementById('file-list');
+                const audioPlayer = document.getElementById('audio-player');
 
                 files.forEach(file => {
                     const listItem = document.createElement('li');
                     const link = document.createElement('a');
                     link.href = file.path;
                     link.textContent = file.name;
+                    link.addEventListener('click', (event) => {
+                    });
+
                     listItem.appendChild(link);
                     fileList.appendChild(listItem);
                 });
