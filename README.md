@@ -9,7 +9,7 @@ ___
 
 <h1>Questions</h1>
 <details><summary><h2>What is this?<h2></summary>
-  <p>This is Luniau. A streaming "platform" that share high quality music without ads for free. If you want to add a music, make an <a href="https://github.com/LeBazarDeBryan/Luniau/issues/new">issues</a>. I'll try my best to be fast.</p>
+  <p>This is Luniau. A streaming "platform" that share high quality music without ads for free. If you want to add a music, make an <a href="https://github.com/LeBazarDeBryan/Luniau/issues/new?assignees=&labels=&projects=&template=song-request.md&title=%5BREQUEST%5D+Author+-+Name">issues</a>. I'll try my best to be fast.</p>
 </details>
 
 <details><summary><h2>Why?<h2></summary>
