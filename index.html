@@ -10,6 +10,8 @@
             color: #ffffff;
             font-family: Arial, sans-serif;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
         .container {
             display: flex;
@@ -23,6 +25,10 @@
         ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
+        }
+        li {
+            margin: 5px 0;
         }
         a {
             cursor: pointer;
@@ -32,15 +38,19 @@
         a:hover {
             color: #dddddd;
         }
+        audio {
+            margin-top: 20px;
+            background-color: #ffffff;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="logo.png" alt="Logo" />
-        <ul id="file-list"></ul>
-        <audio id="audio-player" controls style="margin-top: 20px; background-color: #ffffff;">
+        <img src="logo.png" alt="" />
+        <audio id="audio-player" controls>
             <p>Votre navigateur ne prend pas en charge l'élément audio.</p>
         </audio>
+        <ul id="file-list"></ul>
     </div>
     <script>
         function loadMusicFiles() {
