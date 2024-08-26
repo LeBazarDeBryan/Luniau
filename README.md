@@ -5,7 +5,7 @@
   <p>To use Luniau, you can simply go on the <a href="">website</a>. It use <a href="https://vercel.com">Vercel.</a></p>
 </details>
 
-#
+___
 
 <h1>Questions</h1>
 <details><summary><h2>What is this?<h2></summary>
@@ -20,7 +20,7 @@
   <p>I made it public because I want to share my project to everyone and make music request so they can listen to it in high quality, without ads, with a simple interface without paying a dollar.</p>
 </details>
 
-#
+___
 
 <details><summary><h1>TODO</h1></summary>
 
