@@ -5,7 +5,7 @@ def list_files(startpath):
     file_list = []
     for root, dirs, files in os.walk(startpath):
         for file in files:
-            if file.endswith('.wav'):
+            if file.endswith('.wav', '.webm'):
                 file_list.append({
                     'name': file,
                     'path': os.path.relpath(os.path.join(root, file), startpath)
