@@ -13,11 +13,21 @@ ___
 </details>
 
 <details><summary><h2>Why?<h2></summary>
-  <p>I decided to make this because I'm tired of streaming services poor audio quality (when free) and I'm tired of ads. I don't want to pay when I know that I can listen/download high quality music for free. For example, Spotify Free limit audio to 128kbit/s and in Premium, it's 320kbit/s. (Source: <a href="https://support.spotify.com/us/article/audio-quality">Spotify</a>)</p>
+  <p>I decided to make this because I'm tired of streaming services poor audio quality (when free) and I'm tired of ads. I don't want to pay when I know that I can listen/download high quality music for free. For example, Spotify Free limit audio to 128kbit/s and in Premium, it's 320kbit/s. (Source: <a href="https://support.spotify.com/us/article/audio-quality">Spotify</a>).</p>
+    
 </details>
 
 <details><summary><h2>Why is it public?<h2></summary>
   <p>I made it public because I want to share my project to everyone and make music request so they can listen to it in high quality, without ads, with a simple interface without paying a dollar.</p>
+</details>
+
+<details><summary><h2>Why do you use WAV?<h2></summary>
+
+| Format | Bits | kHz | Sound | Kbit/s |
+|--------|------|-----|-------|--------|
+|  MP3   |      | 48  | Stereo |  320  |
+|  WAV   |  32  | 192 | Stereo | 12 288 |
+
 </details>
 
 ___
