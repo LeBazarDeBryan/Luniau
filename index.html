@@ -6,9 +6,9 @@
     <title>Luniau</title>
 </head>
 <body>
-    <h1>Luniau</h1>
+<center>
+    <img src="logo.png" />
     <ul id="file-list"></ul>
-
     <script>
         fetch('music.json')
             .then(response => response.json())
@@ -26,5 +26,6 @@
             })
             .catch(error => console.error('Erreur lors du chargement de la liste:', error));
     </script>
+</center>
 </body>
 </html>
