@@ -5,6 +5,13 @@
   <p>To use Luniau, you can simply go on the <a href="https://lebazardebryan.github.io/Luniau/">website</a>. It use <a href="https://github.com">GitHub</a></p>
 </details>
 
+<details><summary><h1>Status</h1></summary>
+
+  | Fonction | Status |
+  |----------|--------|
+  | MAJ des musique | [![Félix](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml/badge.svg)](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml) |
+</details>
+
 ___
 
 <h1>Questions</h1>
