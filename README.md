@@ -1,8 +1,8 @@
 <div align="center"><img height="130" width="500" src="logo.png" />
-<p>Streaming High Quality Music throught <a href="https://vercel.com">Vercel</a>.</p></div>
+<p>Streaming High Quality Music throught <a href="https://github.com">GitHub</a>.</p></div>
 
 <details><summary><h1>Usage</h1></summary>
-  <p>To use Luniau, you can simply go on the <a href="">website</a>. It use <a href="https://vercel.com">Vercel.</a></p>
+  <p>To use Luniau, you can simply go on the <a href="">website</a>. It use <a href="https://github.com">GitHub</a></p>
 </details>
 
 ___
