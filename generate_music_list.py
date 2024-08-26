@@ -1,4 +1,5 @@
 import os
+import json
 
 def list_files(start_directory, extensions):
     matching_files = []
@@ -10,8 +11,14 @@ def list_files(start_directory, extensions):
     
     return matching_files
 
-start_directory = '/path/to/your/directory'
+def update_json_file(json_file, data):
+    with open(json_file, 'w') as f:
+        json.dump(data, f, indent=4)
+
+start_directory = '/music'
 extensions = ['.wav', '.flac']
+json_file = 'music.json'
 
 files = list_files(start_directory, extensions)
-print(files)
+update_json_file(json_file, files)
+print(f'Fichier JSON mis à jour avec {len(files)} fichiers.')
