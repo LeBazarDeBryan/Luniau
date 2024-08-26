@@ -1,7 +1,7 @@
 ---
 name: Song request
 about: Request a song to add it.
-title: ''
+title: '[REQUEST] Author - Name'
 labels: ''
 assignees: ''
 
@@ -15,6 +15,3 @@ Author - Title
 
 **Write the link to the song.**
 https://example.com
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
