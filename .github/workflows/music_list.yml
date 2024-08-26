@@ -25,7 +25,9 @@ jobs:
         run: python generate_music_list.py
 
       - name: Pull the latest changes
+        run: git stash
         run: git pull --rebase
+        run: git stash pop
 
       - name: Commit and push changes
         run: |
