@@ -24,6 +24,9 @@ jobs:
       - name: Generate music list
         run: python generate_music_list.py
 
+      - name: Pull the latest changes
+        run: git pull --rebase
+
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
