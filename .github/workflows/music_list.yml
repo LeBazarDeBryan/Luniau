@@ -24,9 +24,13 @@ jobs:
       - name: Generate music list
         run: python generate_music_list.py
 
-      - name: Pull the latest changes
+      - name: Stash
         run: git stash
+
+      - name: Pull the latest changes
         run: git pull --rebase
+
+      - name: Stash Pop
         run: git stash pop
 
       - name: Commit and push changes
