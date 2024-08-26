@@ -5,25 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luniau</title>
     <style>
-        p, a, li {
+        body {
+            background-color: #341d59;
             color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        img {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
         a {
             cursor: pointer;
             text-decoration: underline;
+            color: #ffffff;
         }
         a:hover {
             color: #dddddd;
         }
     </style>
 </head>
-<body style="background-color:#341d59;">
-<center>
-    <img src="logo.png" alt="Logo" />
-    <ul id="file-list"></ul>
-    <audio id="audio-player" controls style="margin-top: 20px; background-color: #ffffff;">
-        <p>Votre navigateur ne prend pas en charge l'élément audio.</p>
-    </audio>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Logo" />
+        <ul id="file-list"></ul>
+        <audio id="audio-player" controls style="margin-top: 20px; background-color: #ffffff;">
+            <p>Votre navigateur ne prend pas en charge l'élément audio.</p>
+        </audio>
+    </div>
     <script>
         function loadMusicFiles() {
             fetch('music.json')
@@ -38,10 +56,14 @@
                         link.href = '#';
                         link.textContent = file.name;
 
+                        const audio = new Audio(file.path);
+                        audio.preload = 'auto';
+
                         link.addEventListener('click', (event) => {
                             event.preventDefault();
                             audioPlayer.src = file.path;
-                            audioPlayer.play();
+                            audioPlayer.play()
+                                .catch(error => console.error('Erreur lors de la lecture du fichier audio:', error));
                         });
 
                         listItem.appendChild(link);
@@ -53,6 +75,5 @@
 
         document.addEventListener('DOMContentLoaded', loadMusicFiles);
     </script>
-</center>
 </body>
 </html>
