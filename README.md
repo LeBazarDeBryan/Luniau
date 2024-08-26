@@ -25,5 +25,7 @@ ___
 <details><summary><h1>TODO</h1></summary>
 
   - [x] Add music.
-  - [ ] Make a web interface.
+  - [x] Make a web interface.
+  - [ ] Make a player.
+  - [ ] Change the font.
 </details>
