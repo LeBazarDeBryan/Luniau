@@ -22,6 +22,7 @@ ___
 </details>
 
 <details><summary><h2>Why do you use WAV?<h2></summary>
+  <p>Compare with the maximum.</p>
 
 | Format | Bits | kHz | Sound | Kbit/s |
 |--------|------|-----|-------|--------|
