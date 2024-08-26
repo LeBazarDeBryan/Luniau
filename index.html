@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luniau</title>
+</head>
+<body>
+    <h1>Luniau</h1>
+    <ul id="file-list"></ul>
+
+    <script>
+        fetch('music.json')
+            .then(response => response.json())
+            .then(files => {
+                const fileList = document.getElementById('file-list');
+
+                files.forEach(file => {
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.href = file.path;
+                    link.textContent = file.name;
+                    listItem.appendChild(link);
+                    fileList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Erreur lors du chargement de la liste:', error));
+    </script>
+</body>
+</html>
