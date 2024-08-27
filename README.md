@@ -55,5 +55,7 @@ ___
   - [x] Make a player.
   - [x] Change the font.
   - [x] Move the player to the bottom and make it wide.
-  - [ ] Add a search.
+  - [x] Add a search box.
+  - [ ] Add more information for songs.
+  - [ ] Add lyrics.
 </details>
