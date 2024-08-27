@@ -2,7 +2,7 @@
 <p>Streaming High Quality Music throught <a href="https://github.com">GitHub</a>.</p></div>
 
 <details><summary><h1>Usage</h1></summary>
-  <p>To use Luniau, you can simply go on the <a href="https://lebazardebryan.github.io/Luniau/">website</a>. It use <a href="https://github.com">GitHub</a>.</p>
+  <p>To use Luniau, you can simply go on the <a href="https://lebazardebryan.github.io/Luniau/">website</a>. It use <a href="https://pages.github.com">GitHub Pages</a>.</p>
 </details>
 
 <details><summary><h1>Status</h1></summary>
