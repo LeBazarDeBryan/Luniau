@@ -258,8 +258,7 @@
 
     function openModal(title, content) {
         modalTitle.textContent = title;
-        // Replace newline characters with <br> for HTML line breaks
-        modalContent.innerHTML = content.replace(/\n/g, '<br>');
+        modalContent.innerHTML = content.replace(/\\n/g, '<br>');
         modal.style.display = 'block';
     }
 
