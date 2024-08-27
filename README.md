@@ -2,7 +2,7 @@
 <p>Streaming High Quality Music throught <a href="https://github.com">GitHub</a>.</p></div>
 
 <details><summary><h1>Usage</h1></summary>
-  <p>To use Luniau, you can simply go on the <a href="https://lebazardebryan.github.io/Luniau/">website</a>. It use <a href="https://github.com">GitHub</a></p>
+  <p>To use Luniau, you can simply go on the <a href="https://lebazardebryan.github.io/Luniau/">website</a>. It use <a href="https://github.com">GitHub</a>.</p>
 </details>
 
 <details><summary><h1>Status</h1></summary>
@@ -36,12 +36,13 @@ ___
 
 <details><summary><h2>Why do you use WAV?<h2></summary>
   <p>WAV can support a lot more sound and have more bitrate.</p>
+  <div align="center">
 
 | Format | Bits | kHz | Sound | Kbit/s |
 |--------|------|-----|-------|--------|
 |  MP3   |      | 48  | Stereo |  320  |
 |  WAV   |  32  | 192 | Stereo | 12 288 |
-
+</div>
 </details>
 
 ___
@@ -51,7 +52,7 @@ ___
   - [x] Add music.
   - [x] Make a web interface.
   - [x] Make a player.
-  - [ ] Change the font.
+  - [x] Change the font.
   - [ ] Add a search.
   - [ ] Move the player to the bottom and make it wide.
 </details>
