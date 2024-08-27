@@ -12,6 +12,10 @@
   | MAJ des musique | [![Félix](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml/badge.svg)](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml) |
 </details>
 
+<details><summary><h1>Quality</h1></summary>
+  <p>Audio quality is 1536 Kbit/s. I plan to change the quality if I can.</p>
+</details>
+
 ___
 
 <h1>Questions</h1>
