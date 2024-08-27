@@ -49,7 +49,7 @@ ___
   - [x] Add music.
   - [x] Make a web interface.
   - [x] Make a player.
-  - [ ] Change the font.
+  - [x] Change the font.
+  - [x] Move the player to the bottom and make it wide.
   - [ ] Add a search.
-  - [ ] Move the player to the bottom and make it wide.
 </details>
