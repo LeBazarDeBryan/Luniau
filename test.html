@@ -205,8 +205,6 @@
                 const searchBox = document.getElementById('search-box');
                 const lyricsBtn = document.getElementById('lyrics-btn');
 
-                let currentLyrics = '';
-
                 function renderFiles(filteredFiles) {
                     fileList.innerHTML = '';
                     filteredFiles.forEach(file => {
@@ -224,7 +222,7 @@
                             audioPlayer.play()
                                 .catch(error => console.error('Erreur lors de la lecture du fichier audio:', error));
 
-                            currentLyrics = file.lyrics || 'No lyrics available.';
+                            lyricsBtn.dataset.lyrics = file.lyrics || 'No lyrics available.';
                         });
 
                         listItem.appendChild(link);
@@ -253,7 +251,6 @@
     const closeModal = document.querySelector('.close');
     const modalTitle = document.getElementById('modal-title');
     const modalContent = document.getElementById('modal-content');
-    const lyricsBtn = document.getElementById('lyrics-btn');
 
     toggleBtn.addEventListener('click', () => {
         panel.classList.toggle('hidden');
@@ -270,9 +267,10 @@
     }
 
     document.getElementById('info-btn').addEventListener('click', () => openModal('Info', 'Information about the application.'));
-    lyricsBtn.addEventListener('click', () => {
-        if (currentLyrics) {
-            openModal('Lyrics', currentLyrics);
+    document.getElementById('lyrics-btn').addEventListener('click', () => {
+        const lyrics = document.getElementById('lyrics-btn').dataset.lyrics;
+        if (lyrics) {
+            openModal('Lyrics', lyrics);
         } else {
             openModal('Lyrics', 'No lyrics available.');
         }
