@@ -62,12 +62,113 @@
             display: block;
             margin: 0 auto;
         }
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .montserrat-alternates-thin {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+        .montserrat-alternates-extralight {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+        .montserrat-alternates-light {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+        .montserrat-alternates-regular {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .montserrat-alternates-medium {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+        .montserrat-alternates-semibold {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+        .montserrat-alternates-bold {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+        .montserrat-alternates-extrabold {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+        }
+        .montserrat-alternates-black {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+        .montserrat-alternates-thin-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+        .montserrat-alternates-extralight-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 200;
+            font-style: italic;
+        }
+        .montserrat-alternates-light-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+        .montserrat-alternates-regular-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+        .montserrat-alternates-medium-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 500;
+            font-style: italic;
+        }
+        .montserrat-alternates-semibold-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 600;
+            font-style: italic;
+        }
+        .montserrat-alternates-bold-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+        .montserrat-alternates-extrabold-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 800;
+            font-style: italic;
+        }
+        .montserrat-alternates-black-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 900;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <p>BETA</p>
         <a href="https://github.com/LeBazarDeBryan/Luniau#readme"><img src="logo.png" alt="" /></a>
+        <input type="text" id="search-box" placeholder="Search for music...">
         <ul id="file-list"></ul>
     </div>
     <div class="audio-container">
@@ -82,26 +183,41 @@
                 .then(files => {
                     const fileList = document.getElementById('file-list');
                     const audioPlayer = document.getElementById('audio-player');
+                    const searchBox = document.getElementById('search-box');
 
-                    files.forEach(file => {
-                        const listItem = document.createElement('li');
-                        const link = document.createElement('a');
-                        link.href = '#';
-                        link.textContent = file.name;
+                    function renderFiles(filteredFiles) {
+                        fileList.innerHTML = ''; // Clear the existing list
+                        filteredFiles.forEach(file => {
+                            const listItem = document.createElement('li');
+                            const link = document.createElement('a');
+                            link.href = '#';
+                            link.textContent = file.name;
 
-                        const audio = new Audio(file.path);
-                        audio.preload = 'auto';
+                            const audio = new Audio(file.path);
+                            audio.preload = 'auto';
 
-                        link.addEventListener('click', (event) => {
-                            event.preventDefault();
-                            audioPlayer.src = file.path;
-                            audioPlayer.play()
-                                .catch(error => console.error('Erreur lors de la lecture du fichier audio:', error));
+                            link.addEventListener('click', (event) => {
+                                event.preventDefault();
+                                audioPlayer.src = file.path;
+                                audioPlayer.play()
+                                    .catch(error => console.error('Erreur lors de la lecture du fichier audio:', error));
+                            });
+
+                            listItem.appendChild(link);
+                            fileList.appendChild(listItem);
                         });
+                    }
 
-                        listItem.appendChild(link);
-                        fileList.appendChild(listItem);
-                    });
+                    function filterFiles() {
+                        const query = searchBox.value.toLowerCase();
+                        const filteredFiles = files.filter(file => file.name.toLowerCase().includes(query));
+                        renderFiles(filteredFiles);
+                    }
+
+                    searchBox.addEventListener('input', filterFiles);
+
+                    // Initial render
+                    renderFiles(files);
                 })
                 .catch(error => console.error('Erreur lors du chargement de la liste:', error));
         }
