@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,7 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: row; /* Change to row for side-by-side layout */
+            flex-direction: column;
             min-height: 100vh;
         }
         .container {
@@ -26,19 +27,6 @@
             align-items: center;
             margin: 20px;
             box-sizing: border-box;
-        }
-        .lyrics-panel {
-            width: 300px; /* Width of the lyrics panel */
-            background-color: #4a2c6c;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            box-sizing: border-box;
-            color: #ffffff;
-            height: 100%;
-            overflow-y: auto; /* Enable scrolling if content is too long */
-        }
-        .lyrics-panel h2 {
-            margin-top: 0;
         }
         img {
             margin-bottom: 20px;
@@ -65,62 +53,156 @@
             left: 0;
             width: 100%;
             background-color: #341d59;
-            padding: 10px;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.3);
             box-sizing: border-box;
+            border-radius: 50px;
         }
         audio {
             width: 100%;
             max-width: 100%;
             display: block;
             margin: 0 auto;
+            border-radius: 50px;
         }
         input[type="text"] {
             padding: 10px;
             margin-bottom: 20px;
-            border: 2px solid #ffffff; /* Border color */
-            border-radius: 5px; /* Rounded corners */
+            border: 1px solid #ddd;
+            border-radius: 50px;
             width: 100%;
             max-width: 500px;
             box-sizing: border-box;
             font-size: 16px;
-            background-color: #4a2c6c; /* Background color */
-            color: #ffffff; /* Text color */
+            font-family: "Montserrat Alternates", sans-serif;
+            background-color: #341d59;
+            color: #ffffff;
         }
-        input[type="text"]::placeholder {
-            color: #d0a5d1; /* Placeholder text color */
+        .button-panel {
+            margin: 20px 0;
         }
-        .panel-controls {
-            margin-bottom: 20px;
-        }
-        .panel-controls button {
+        .button-panel button {
+            background-color: #ffffff;
+            color: #341d59;
+            border: none;
+            border-radius: 50px;
             padding: 10px 20px;
             margin: 5px;
-            border: none;
-            border-radius: 5px;
-            background-color: #6a1b9a;
-            color: #ffffff;
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 600;
+            font-size: 16px;
             cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
         }
-        .panel-controls button:hover {
-            background-color: #8e24aa;
+        .button-panel button:hover {
+            background-color: #dddddd;
+            color: #341d59;
+        }
+        .montserrat-alternates-thin {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+        .montserrat-alternates-extralight {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+        .montserrat-alternates-light {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+        .montserrat-alternates-regular {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .montserrat-alternates-medium {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+        .montserrat-alternates-semibold {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+        .montserrat-alternates-bold {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+        .montserrat-alternates-extrabold {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+        }
+        .montserrat-alternates-black {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+        .montserrat-alternates-thin-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+        .montserrat-alternates-extralight-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 200;
+            font-style: italic;
+        }
+        .montserrat-alternates-light-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+        .montserrat-alternates-regular-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+        .montserrat-alternates-medium-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 500;
+            font-style: italic;
+        }
+        .montserrat-alternates-semibold-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 600;
+            font-style: italic;
+        }
+        .montserrat-alternates-bold-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+        .montserrat-alternates-extrabold-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 800;
+            font-style: italic;
+        }
+        .montserrat-alternates-black-italic {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 900;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="panel-controls">
-            <button id="show-lyrics">Show Lyrics</button>
-            <button id="hide-lyrics">Hide Lyrics</button>
-        </div>
         <p>BETA</p>
         <a href="https://github.com/LeBazarDeBryan/Luniau#readme"><img src="logo.png" alt="" /></a>
         <input type="text" id="search-box" placeholder="Search for music...">
         <ul id="file-list"></ul>
-    </div>
-    <div class="lyrics-panel" id="lyrics-panel" style="display: none;">
-        <h2>Lyrics</h2>
-        <p id="lyrics-text">No lyrics available.</p>
+
+        <!-- Button Panel -->
+        <div class="button-panel">
+            <button onclick="playNext()">Next</button>
+            <button onclick="playPrevious()">Previous</button>
+            <button onclick="shufflePlay()">Shuffle</button>
+        </div>
     </div>
     <div class="audio-container">
         <audio id="audio-player" controls>
@@ -135,10 +217,6 @@
                     const fileList = document.getElementById('file-list');
                     const audioPlayer = document.getElementById('audio-player');
                     const searchBox = document.getElementById('search-box');
-                    const lyricsPanel = document.getElementById('lyrics-panel');
-                    const lyricsText = document.getElementById('lyrics-text');
-                    const showLyricsButton = document.getElementById('show-lyrics');
-                    const hideLyricsButton = document.getElementById('hide-lyrics');
 
                     function renderFiles(filteredFiles) {
                         fileList.innerHTML = ''; // Clear the existing list
@@ -156,9 +234,6 @@
                                 audioPlayer.src = file.path;
                                 audioPlayer.play()
                                     .catch(error => console.error('Erreur lors de la lecture du fichier audio:', error));
-
-                                // Fetch and display lyrics here if available
-                                fetchLyrics(file.path);
                             });
 
                             listItem.appendChild(link);
@@ -172,27 +247,27 @@
                         renderFiles(filteredFiles);
                     }
 
-                    function fetchLyrics(filePath) {
-                        // Mock implementation; replace with actual lyrics fetching logic
-                        const fileName = filePath.split('/').pop().replace('.wav', '').replace('.flac', '');
-                        const lyrics = `Lyrics for ${fileName}`; // Replace with real lyrics fetching
-                        lyricsText.textContent = lyrics;
-                    }
-
-                    showLyricsButton.addEventListener('click', () => {
-                        lyricsPanel.style.display = 'block';
-                    });
-
-                    hideLyricsButton.addEventListener('click', () => {
-                        lyricsPanel.style.display = 'none';
-                    });
-
                     searchBox.addEventListener('input', filterFiles);
 
                     // Initial render
                     renderFiles(files);
                 })
                 .catch(error => console.error('Erreur lors du chargement de la liste:', error));
+        }
+
+        function playNext() {
+            // Add logic to play the next track
+            console.log('Next track');
+        }
+
+        function playPrevious() {
+            // Add logic to play the previous track
+            console.log('Previous track');
+        }
+
+        function shufflePlay() {
+            // Add logic to shuffle play the tracks
+            console.log('Shuffle play');
         }
 
         document.addEventListener('DOMContentLoaded', loadMusicFiles);
