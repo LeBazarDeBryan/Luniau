@@ -6,10 +6,12 @@
 </details>
 
 <details><summary><h1>Status</h1></summary>
+<div align="center">
 
   | Fonction | Status |
   |----------|--------|
-  | MAJ des musique | [![Félix](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml/badge.svg)](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml) |
+  | Music Update | [![Félix](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml/badge.svg)](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml) |
+</div>
 </details>
 
 <details><summary><h1>Quality</h1></summary>
