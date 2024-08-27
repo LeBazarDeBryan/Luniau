@@ -1,5 +1,9 @@
 [
     {
+        "name": "Kanye West - On Sight",
+        "path": "music/Kanye West/On Sight.wav"
+    },
+    {
         "name": "LEOJ - Just Dance (Hardstyle Remix)",
         "path": "music/LEOJ/Just Dance (Hardstyle Remix).wav"
     },
@@ -9,7 +13,18 @@
     },
     {
         "name": "VIDEOCLUB - Roi",
-        "path": "music/VIDEOCLUB/Roi.wav",
-        "lyrics": "T'en trouveras d'autres des mecs comme moi\\nY'en aura plein des gars pour toi\\nTes boucles brunes s'évaporent\\nDans mon âme, dans mon corps\\n\\nJe te cherche dans mes songes, je te traque dans mes rêves\\nÀ l’aube ou dans mon ombre, ère en vaine sur tes lèvres\\nÉcorchant les abîmes de mon cœur écarlate\\nTu n'es que le point fixe de mes songes disparates\\nAime-moi dans la neige, aime-moi sous l'soleil, aime-moi la peau beige dans les fleurs de vermeilles\\nJ'vois des gens qui courent nus, j'vois des gens qui m'sourient\\nMais moi j'plane dans la rue, dans tes yeux, sous la pluie\\nEt je reste l'esprit de tes lointains souvenirs, dans mes songes ensevelis, tes larmes, tes rires\\nTu es ma femme iconique, tu es mon rubis saphir\\nJe suis ta rose lyrique, je suis ces gens qui t'admirent\\n\\nAime-moi dans la neige, aime-moi sous le soleil, aime-moi la peau beige dans les fleurs de vermeilles\\nAime-moi dans la neige, aime-moi sous le soleil, aime-moi la peau beige dans les fleurs de vermeilles\\n\\nDes jours durant, fuyant la nuit, j'parcours ta peau, j'parcours la ville. La fumée suave de ta bouche, file, s’échappe de jours en jours\\nQuand je râle dans la nuit, je suis seule sous mes vices\\nJe t'aime quand il pleut tu es la nymphe de mes vœux, je t'embrasse dans mes rêves et je t'aime au bout des lèvres\\nJe déteste le gout mièvre de leurs bouches, de leurs rêves\\nDans la nuit tu me regardes, sous les nuages je divague\\n\\nAvec toi je suis roi\\nToi je suis roi\\nToi je suis roi\\nToi je suis roi\\n\\nAime-moi dans la neige, aime-moi sous le soleil, aime-moi la peau beige dans les fleurs de vermeilles\\nAime-moi dans la neige, aime-moi sous le soleil, aime-moi la peau beige dans les fleurs de vermeilles\\n\\nJ'suis un garçon de la nuit, moi je laisse tomber les filles, je n'aime que tes bas résilles qui dans mes pensée grésillent\\nJ'suis un garçon de la nuit, moi je laisse tomber les filles, je n'aime que tes bas résilles qui dans mes pensée grésillent\\n\\nAime-moi dans la neige, aime-moi sous le soleil, aime-moi la peau beige dans les fleurs de vermeilles\\nAime-moi dans la neige, aime-moi sous le soleil, aime-moi la peau beige dans les fleurs de vermeilles"
+        "path": "music/VIDEOCLUB/Roi.wav"
+    },
+    {
+        "name": "Yves Tumor - Limerence",
+        "path": "music/Yves Tumor/Limerence.wav"
+    },
+    {
+        "name": "Yves Tumor - Limerence (Instrumental)",
+        "path": "music/Yves Tumor/Limerence (Instrumental).wav"
+    },
+    {
+        "name": "saraunh0ly - wutiwant",
+        "path": "music/saraunh0ly/wutiwant.wav"
     }
 ]
