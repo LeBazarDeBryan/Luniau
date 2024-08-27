@@ -2,14 +2,16 @@
 <p>Streaming High Quality Music throught <a href="https://github.com">GitHub</a>.</p></div>
 
 <details><summary><h1>Usage</h1></summary>
-  <p>To use Luniau, you can simply go on the <a href="https://lebazardebryan.github.io/Luniau/">website</a>. It use <a href="https://github.com">GitHub</a></p>
+  <p>To use Luniau, you can simply go on the <a href="https://lebazardebryan.github.io/Luniau/">website</a>. It use <a href="https://pages.github.com">GitHub Pages</a>.</p>
 </details>
 
 <details><summary><h1>Status</h1></summary>
+<div align="center">
 
   | Fonction | Status |
   |----------|--------|
-  | MAJ des musique | [![Félix](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml/badge.svg)](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml) |
+  | Music Update | [![Félix](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml/badge.svg)](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml) |
+</div>
 </details>
 
 <details><summary><h1>Quality</h1></summary>
@@ -34,12 +36,13 @@ ___
 
 <details><summary><h2>Why do you use WAV?<h2></summary>
   <p>WAV can support a lot more sound and have more bitrate.</p>
+  <div align="center">
 
 | Format | Bits | kHz | Sound | Kbit/s |
 |--------|------|-----|-------|--------|
 |  MP3   |      | 48  | Stereo |  320  |
 |  WAV   |  32  | 192 | Stereo | 12 288 |
-
+</div>
 </details>
 
 ___
