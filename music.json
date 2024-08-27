@@ -1,10 +1,10 @@
 [
     {
-        "name": "VIDEOCLUB - Roi",
-        "path": "music/VIDEOCLUB/Roi.wav"
-    },
-    {
         "name": "LEOJ - Just Dance (Hardstyle Remix)",
         "path": "music/LEOJ/Just Dance (Hardstyle Remix).wav"
+    },
+    {
+        "name": "VIDEOCLUB - Roi",
+        "path": "music/VIDEOCLUB/Roi.wav"
     }
 ]
