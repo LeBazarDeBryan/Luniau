@@ -11,6 +11,7 @@
   | Fonction | Status |
   |----------|--------|
   | Music Update | [![Félix](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml/badge.svg)](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml) |
+  | Website Deployment | [![pages-build-deployment](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/pages/pages-build-deployment) |
 </div>
 </details>
 
@@ -54,5 +55,7 @@ ___
   - [x] Make a player.
   - [x] Change the font.
   - [x] Move the player to the bottom and make it wide.
-  - [ ] Add a search.
+  - [x] Add a search box.
+  - [ ] Add more information for songs.
+  - [ ] Add lyrics.
 </details>
