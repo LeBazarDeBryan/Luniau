@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luniau BETA</title>
@@ -91,6 +91,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            transition: right 0.3s ease;
+        }
+        .panel-right.hidden {
+            right: -200px;
         }
         .panel-right button {
             background-color: #ffffff;
@@ -106,6 +110,22 @@
         .panel-right button:hover {
             background-color: #dddddd;
         }
+        .toggle-button {
+            background-color: #ffffff;
+            color: #341d59;
+            border: none;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            transform: translateY(-50%);
+            font-size: 12px;
+        }
+        .toggle-button:hover {
+            background-color: #dddddd;
+        }
     </style>
 </head>
 <body>
@@ -116,7 +136,8 @@
         <ul id="file-list"></ul>
     </div>
 
-    <div class="panel-right">
+    <div class="panel-right" id="panel">
+        <button class="toggle-button" id="toggle-button">&lt;</button>
         <button>Button 1</button>
         <button>Button 2</button>
         <button>Button 3</button>
@@ -129,6 +150,14 @@
     </div>
 
     <script>
+        const panel = document.getElementById('panel');
+        const toggleButton = document.getElementById('toggle-button');
+
+        toggleButton.addEventListener('click', () => {
+            panel.classList.toggle('hidden');
+            toggleButton.textContent = panel.classList.contains('hidden') ? '>' : '<';
+        });
+
         function loadMusicFiles() {
             fetch('music.json')
                 .then(response => response.json())
@@ -138,7 +167,7 @@
                     const searchBox = document.getElementById('search-box');
 
                     function renderFiles(filteredFiles) {
-                        fileList.innerHTML = ''; // Clear the existing list
+                        fileList.innerHTML = '';
                         filteredFiles.forEach(file => {
                             const listItem = document.createElement('li');
                             const link = document.createElement('a');
@@ -168,7 +197,6 @@
 
                     searchBox.addEventListener('input', filterFiles);
 
-                    // Initial render
                     renderFiles(files);
                 })
                 .catch(error => console.error('Erreur lors du chargement de la liste:', error));
