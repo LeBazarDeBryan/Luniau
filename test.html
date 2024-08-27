@@ -194,7 +194,6 @@
             <p id="modal-content">Content goes here...</p>
         </div>
     </div>
-
 <script>
     function loadMusicFiles() {
         fetch('music.json')
@@ -221,7 +220,6 @@
                             audioPlayer.src = file.path;
                             audioPlayer.play()
                                 .catch(error => console.error('Erreur lors de la lecture du fichier audio:', error));
-
                             lyricsBtn.dataset.lyrics = file.lyrics || 'No lyrics available.';
                         });
 
@@ -258,7 +256,7 @@
 
     function openModal(title, content) {
         modalTitle.textContent = title;
-        modalContent.textContent = content;
+        modalContent.innerHTML = content.replace(/\\n/g, '<br>');
         modal.style.display = 'block';
     }
 
