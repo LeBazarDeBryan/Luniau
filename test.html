@@ -221,6 +221,7 @@
                             audioPlayer.play()
                                 .catch(error => console.error('Erreur lors de la lecture du fichier audio:', error));
 
+                            // Store the lyrics for the selected track
                             lyricsBtn.dataset.lyrics = file.lyrics || 'No lyrics available.';
                         });
 
@@ -257,6 +258,7 @@
 
     function openModal(title, content) {
         modalTitle.textContent = title;
+        // Replace newline characters with <br> for HTML line breaks
         modalContent.innerHTML = content.replace(/\n/g, '<br>');
         modal.style.display = 'block';
     }
