@@ -222,8 +222,7 @@
                             audioPlayer.play()
                                 .catch(error => console.error('Erreur lors de la lecture du fichier audio:', error));
 
-                            // When a track is selected, store its lyrics for display
-                            lyricsBtn.dataset.lyrics = file.lyrics;
+                            lyricsBtn.dataset.lyrics = file.lyrics || 'No lyrics available.';
                         });
 
                         listItem.appendChild(link);
