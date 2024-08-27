@@ -256,9 +256,9 @@
         panel.classList.toggle('hidden');
     });
 
-    function openModal(title, content) {
+    function openModal(title, content) 
         modalTitle.textContent = title;
-        modalContent.textContent = content;
+        modalContent.innerHTML = content.replace(/\n/g, '<br>');
         modal.style.display = 'block';
     }
 
