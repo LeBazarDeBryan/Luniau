@@ -15,7 +15,7 @@ def update_json_file(json_file, data):
     with open(json_file, 'w') as f:
         json.dump(data, f, indent=4)
 
-start_directory = '/music'
+start_directory = '/music/'
 extensions = ['.wav', '.flac']
 json_file = 'music.json'
 
