@@ -29,7 +29,7 @@ ___
 </details>
 
 <details><summary><h2>Why do you use WAV?<h2></summary>
-  <p>Compare with the maximum.</p>
+  <p>WAV can support a lot more sound and have more bitrate.</p>
 
 | Format | Bits | kHz | Sound | Kbit/s |
 |--------|------|-----|-------|--------|
