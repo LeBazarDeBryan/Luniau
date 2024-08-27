@@ -51,4 +51,5 @@ ___
   - [x] Make a player.
   - [ ] Change the font.
   - [ ] Add a search.
+  - [ ] Move the player to the bottom and make it wide.
 </details>
