@@ -13,6 +13,8 @@ def list_files(start_directory, extensions):
                 file_name = f"{author} - {title}"
                 matching_files.append({"name": file_name, "path": file_path})
     
+    matching_files.sort(key=lambda x: x['name'])
+    
     return matching_files
 
 def update_json_file(json_file, data):
