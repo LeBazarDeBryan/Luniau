@@ -11,6 +11,7 @@
   | Fonction | Status |
   |----------|--------|
   | Music Update | [![Félix](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml/badge.svg)](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml) |
+  | Website Deployment | [![pages-build-deployment](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/pages/pages-build-deployment) |
 </div>
 </details>
 
