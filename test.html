@@ -16,7 +16,7 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
+            flex-direction: row; /* Change to row for side-by-side layout */
             min-height: 100vh;
         }
         .container {
@@ -26,6 +26,19 @@
             align-items: center;
             margin: 20px;
             box-sizing: border-box;
+        }
+        .lyrics-panel {
+            width: 300px; /* Width of the lyrics panel */
+            background-color: #4a2c6c;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+            color: #ffffff;
+            height: 100%;
+            overflow-y: auto; /* Enable scrolling if content is too long */
+        }
+        .lyrics-panel h2 {
+            margin-top: 0;
         }
         img {
             margin-bottom: 20px;
@@ -65,68 +78,49 @@
         input[type="text"] {
             padding: 10px;
             margin-bottom: 20px;
-            border: 2px solid #ffffff;
-            border-radius: 5px;
+            border: 2px solid #ffffff; /* Border color */
+            border-radius: 5px; /* Rounded corners */
             width: 100%;
             max-width: 500px;
             box-sizing: border-box;
             font-size: 16px;
-            background-color: #4a2c6c;
-            color: #ffffff;
+            background-color: #4a2c6c; /* Background color */
+            color: #ffffff; /* Text color */
         }
         input[type="text"]::placeholder {
-            color: #d0a5d1;
+            color: #d0a5d1; /* Placeholder text color */
         }
-        /* Lyrics Panel Styles */
-        #lyrics-panel {
-            display: none;
-            position: fixed;
-            bottom: 60px;
-            left: 0;
-            width: 100%;
-            max-width: 500px;
-            background-color: #4a2c6c;
-            color: #ffffff;
-            padding: 15px;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
-            box-sizing: border-box;
-            border-radius: 5px;
-            text-align: left;
+        .panel-controls {
+            margin-bottom: 20px;
         }
-        #lyrics-panel h3 {
-            margin-top: 0;
-        }
-        #lyrics-panel p {
-            margin-bottom: 0;
-        }
-        #lyrics-button {
-            padding: 10px 15px;
-            margin-top: 10px;
+        .panel-controls button {
+            padding: 10px 20px;
+            margin: 5px;
             border: none;
             border-radius: 5px;
-            background-color: #6c4a6c;
+            background-color: #6a1b9a;
             color: #ffffff;
             cursor: pointer;
-            font-size: 16px;
         }
-        #lyrics-button:hover {
-            background-color: #d0a5d1;
+        .panel-controls button:hover {
+            background-color: #8e24aa;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="panel-controls">
+            <button id="show-lyrics">Show Lyrics</button>
+            <button id="hide-lyrics">Hide Lyrics</button>
+        </div>
         <p>BETA</p>
         <a href="https://github.com/LeBazarDeBryan/Luniau#readme"><img src="logo.png" alt="" /></a>
         <input type="text" id="search-box" placeholder="Search for music...">
         <ul id="file-list"></ul>
-        <!-- Button to toggle lyrics panel -->
-        <button id="lyrics-button">Show Lyrics</button>
-        <!-- Lyrics Panel -->
-        <div id="lyrics-panel">
-            <h3>Song Title - Artist</h3>
-            <p>Here are the lyrics for the song. Add multiple lines as needed.</p>
-        </div>
+    </div>
+    <div class="lyrics-panel" id="lyrics-panel" style="display: none;">
+        <h2>Lyrics</h2>
+        <p id="lyrics-text">No lyrics available.</p>
     </div>
     <div class="audio-container">
         <audio id="audio-player" controls>
@@ -141,8 +135,10 @@
                     const fileList = document.getElementById('file-list');
                     const audioPlayer = document.getElementById('audio-player');
                     const searchBox = document.getElementById('search-box');
-                    const lyricsButton = document.getElementById('lyrics-button');
                     const lyricsPanel = document.getElementById('lyrics-panel');
+                    const lyricsText = document.getElementById('lyrics-text');
+                    const showLyricsButton = document.getElementById('show-lyrics');
+                    const hideLyricsButton = document.getElementById('hide-lyrics');
 
                     function renderFiles(filteredFiles) {
                         fileList.innerHTML = ''; // Clear the existing list
@@ -160,6 +156,9 @@
                                 audioPlayer.src = file.path;
                                 audioPlayer.play()
                                     .catch(error => console.error('Erreur lors de la lecture du fichier audio:', error));
+
+                                // Fetch and display lyrics here if available
+                                fetchLyrics(file.path);
                             });
 
                             listItem.appendChild(link);
@@ -173,18 +172,22 @@
                         renderFiles(filteredFiles);
                     }
 
-                    searchBox.addEventListener('input', filterFiles);
+                    function fetchLyrics(filePath) {
+                        // Mock implementation; replace with actual lyrics fetching logic
+                        const fileName = filePath.split('/').pop().replace('.wav', '').replace('.flac', '');
+                        const lyrics = `Lyrics for ${fileName}`; // Replace with real lyrics fetching
+                        lyricsText.textContent = lyrics;
+                    }
 
-                    // Toggle lyrics panel visibility
-                    lyricsButton.addEventListener('click', () => {
-                        if (lyricsPanel.style.display === 'none' || lyricsPanel.style.display === '') {
-                            lyricsPanel.style.display = 'block';
-                            lyricsButton.textContent = 'Hide Lyrics';
-                        } else {
-                            lyricsPanel.style.display = 'none';
-                            lyricsButton.textContent = 'Show Lyrics';
-                        }
+                    showLyricsButton.addEventListener('click', () => {
+                        lyricsPanel.style.display = 'block';
                     });
+
+                    hideLyricsButton.addEventListener('click', () => {
+                        lyricsPanel.style.display = 'none';
+                    });
+
+                    searchBox.addEventListener('input', filterFiles);
 
                     // Initial render
                     renderFiles(files);
