@@ -123,7 +123,7 @@
             border: none;
             padding: 15px;
             border-radius: 10px 0 0 10px;
-            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+            box-shadow: -2px 0 10px rgba(255, 255, 255, 0.5);
             cursor: pointer;
             z-index: 10;
         }
@@ -195,84 +195,95 @@
         </div>
     </div>
 
-    <script>
-        function loadMusicFiles() {
-            fetch('music.json')
-                .then(response => response.json())
-                .then(files => {
-                    const fileList = document.getElementById('file-list');
-                    const audioPlayer = document.getElementById('audio-player');
-                    const searchBox = document.getElementById('search-box');
+<script>
+    function loadMusicFiles() {
+        fetch('music.json')
+            .then(response => response.json())
+            .then(files => {
+                const fileList = document.getElementById('file-list');
+                const audioPlayer = document.getElementById('audio-player');
+                const searchBox = document.getElementById('search-box');
+                const lyricsBtn = document.getElementById('lyrics-btn');
 
-                    function renderFiles(filteredFiles) {
-                        fileList.innerHTML = '';
-                        filteredFiles.forEach(file => {
-                            const listItem = document.createElement('li');
-                            const link = document.createElement('a');
-                            link.href = '#';
-                            link.textContent = file.name;
+                function renderFiles(filteredFiles) {
+                    fileList.innerHTML = '';
+                    filteredFiles.forEach(file => {
+                        const listItem = document.createElement('li');
+                        const link = document.createElement('a');
+                        link.href = '#';
+                        link.textContent = file.name;
 
-                            const audio = new Audio(file.path);
-                            audio.preload = 'auto';
+                        const audio = new Audio(file.path);
+                        audio.preload = 'auto';
 
-                            link.addEventListener('click', (event) => {
-                                event.preventDefault();
-                                audioPlayer.src = file.path;
-                                audioPlayer.play()
-                                    .catch(error => console.error('Erreur lors de la lecture du fichier audio:', error));
-                            });
+                        link.addEventListener('click', (event) => {
+                            event.preventDefault();
+                            audioPlayer.src = file.path;
+                            audioPlayer.play()
+                                .catch(error => console.error('Erreur lors de la lecture du fichier audio:', error));
 
-                            listItem.appendChild(link);
-                            fileList.appendChild(listItem);
+                            // When a track is selected, store its lyrics for display
+                            lyricsBtn.dataset.lyrics = file.lyrics;
                         });
-                    }
 
-                    function filterFiles() {
-                        const query = searchBox.value.toLowerCase();
-                        const filteredFiles = files.filter(file => file.name.toLowerCase().includes(query));
-                        renderFiles(filteredFiles);
-                    }
+                        listItem.appendChild(link);
+                        fileList.appendChild(listItem);
+                    });
+                }
 
-                    searchBox.addEventListener('input', filterFiles);
+                function filterFiles() {
+                    const query = searchBox.value.toLowerCase();
+                    const filteredFiles = files.filter(file => file.name.toLowerCase().includes(query));
+                    renderFiles(filteredFiles);
+                }
 
-                    renderFiles(files);
-                })
-                .catch(error => console.error('Erreur lors du chargement de la liste:', error));
+                searchBox.addEventListener('input', filterFiles);
+
+                renderFiles(files);
+            })
+            .catch(error => console.error('Erreur lors du chargement de la liste:', error));
+    }
+
+    document.addEventListener('DOMContentLoaded', loadMusicFiles);
+
+    const panel = document.querySelector('.panel-right');
+    const toggleBtn = document.querySelector('.toggle-panel-btn');
+    const modal = document.getElementById('modal');
+    const closeModal = document.querySelector('.close');
+    const modalTitle = document.getElementById('modal-title');
+    const modalContent = document.getElementById('modal-content');
+
+    toggleBtn.addEventListener('click', () => {
+        panel.classList.toggle('hidden');
+    });
+
+    function openModal(title, content) {
+        modalTitle.textContent = title;
+        modalContent.textContent = content;
+        modal.style.display = 'block';
+    }
+
+    function closeModalHandler() {
+        modal.style.display = 'none';
+    }
+
+    document.getElementById('info-btn').addEventListener('click', () => openModal('Info', 'Information about the application.'));
+    document.getElementById('lyrics-btn').addEventListener('click', () => {
+        const lyrics = document.getElementById('lyrics-btn').dataset.lyrics;
+        if (lyrics) {
+            openModal('Lyrics', lyrics);
+        } else {
+            openModal('Lyrics', 'No lyrics available.');
         }
+    });
+    document.getElementById('about-btn').addEventListener('click', () => openModal('About', 'About the application.'));
 
-        document.addEventListener('DOMContentLoaded', loadMusicFiles);
-
-        const panel = document.querySelector('.panel-right');
-        const toggleBtn = document.querySelector('.toggle-panel-btn');
-        const modal = document.getElementById('modal');
-        const closeModal = document.querySelector('.close');
-        const modalTitle = document.getElementById('modal-title');
-        const modalContent = document.getElementById('modal-content');
-
-        toggleBtn.addEventListener('click', () => {
-            panel.classList.toggle('hidden');
-        });
-
-        function openModal(title, content) {
-            modalTitle.textContent = title;
-            modalContent.textContent = content;
-            modal.style.display = 'block';
+    closeModal.addEventListener('click', closeModalHandler);
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModalHandler();
         }
-
-        function closeModalHandler() {
-            modal.style.display = 'none';
-        }
-
-        document.getElementById('info-btn').addEventListener('click', () => openModal('Info', 'Information about the application.'));
-        document.getElementById('lyrics-btn').addEventListener('click', () => openModal('Lyrics', 'Lyrics will be displayed here.'));
-        document.getElementById('about-btn').addEventListener('click', () => openModal('About', 'About the application.'));
-
-        closeModal.addEventListener('click', closeModalHandler);
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                closeModalHandler();
-            }
-        });
-    </script>
+    });
+</script>
 </body>
 </html>
