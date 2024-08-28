@@ -220,7 +220,8 @@
                             event.preventDefault();
                             audioPlayer.src = file.path;
                             audioPlayer.play()
-                                .catch(error => console.error('Erreur lors de la lecture du fichier audio:', error));
+                                .catch(error => console.error('Error playing the audio file:', error));
+
                             lyricsBtn.dataset.lyrics = file.lyrics || 'No lyrics available.';
                         });
 
@@ -239,7 +240,7 @@
 
                 renderFiles(files);
             })
-            .catch(error => console.error('Erreur lors du chargement de la liste:', error));
+            .catch(error => console.error('Error loading file list:', error));
     }
 
     document.addEventListener('DOMContentLoaded', loadMusicFiles);
@@ -257,7 +258,7 @@
 
     function openModal(title, content) {
         modalTitle.textContent = title;
-        modalContent.innerHTML = content.replace(/\\n/g, '<br>');
+        modalContent.innerHTML = content.replace(/\n/g, '<br>');
         modal.style.display = 'block';
     }
 
