@@ -200,7 +200,7 @@
             <span class="close">&times;</span>
             <img id="modal-cover" src="" alt="Cover Image" style="display: none;">
             <h2 id="modal-title">Title</h2>
-            <p id="modal-content">Content goes here...</p>
+            <p id="modal-content">Content.</p>
         </div>
     </div>
 <script>
@@ -299,7 +299,7 @@ function fetchFileContent(filePath) {
 
         Promise.all([fetchFileContent(datePath), fetchFileContent(additionalInfoPath)])
             .then(([dateContent, additionalInfoContent]) => {
-                openModal('Info', `Date: ${dateContent}<br>Additional Information: ${additionalInfoContent}`, cover);
+                openModal('Info', `Date: ${dateContent}<br />Additional Information: ${additionalInfoContent}`, cover);
             });
     });
 
