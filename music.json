@@ -1,30 +1,37 @@
 [
     {
         "name": "Kanye West - On Sight",
-        "path": "music/Kanye West/On Sight.wav"
+        "path": "music/Kanye West/On Sight.wav",
+        "lyrics": ""
     },
     {
         "name": "LEOJ - Just Dance (Hardstyle Remix)",
-        "path": "music/LEOJ/Just Dance (Hardstyle Remix).wav"
+        "path": "music/LEOJ/Just Dance (Hardstyle Remix).wav",
+        "lyrics": ""
     },
     {
         "name": "SaphireLeFleur - ROI (Videoclub on Hardcore)",
-        "path": "music/SaphireLeFleur/ROI (Videoclub on Hardcore).wav"
+        "path": "music/SaphireLeFleur/ROI (Videoclub on Hardcore).wav",
+        "lyrics": ""
     },
     {
         "name": "VIDEOCLUB - Roi",
-        "path": "music/VIDEOCLUB/Roi.wav"
+        "path": "music/VIDEOCLUB/Roi.wav",
+        "lyrics": ""
     },
     {
         "name": "Yves Tumor - Limerence",
-        "path": "music/Yves Tumor/Limerence.wav"
+        "path": "music/Yves Tumor/Limerence.wav",
+        "lyrics": ""
     },
     {
         "name": "Yves Tumor - Limerence (Instrumental)",
-        "path": "music/Yves Tumor/Limerence (Instrumental).wav"
+        "path": "music/Yves Tumor/Limerence (Instrumental).wav",
+        "lyrics": ""
     },
     {
         "name": "saraunh0ly - wutiwant",
-        "path": "music/saraunh0ly/wutiwant.wav"
+        "path": "music/saraunh0ly/wutiwant.wav",
+        "lyrics": ""
     }
 ]
