@@ -24,6 +24,14 @@
         "additionalInfo": "additional_info/SaphireLeFleur/ROI (Videoclub on Hardcore).txt"
     },
     {
+        "name": "SaphireLeFleur - ROI (Videoclub on Hardcore) - Spotify ver.",
+        "path": "music/SaphireLeFleur/ROI (Videoclub on Hardcore) - Spotify ver..wav",
+        "lyrics": "lyrics/SaphireLeFleur/ROI (Videoclub on Hardcore) - Spotify ver..txt",
+        "cover": "covers/SaphireLeFleur/ROI (Videoclub on Hardcore) - Spotify ver..jpg",
+        "date": "dates/SaphireLeFleur/ROI (Videoclub on Hardcore) - Spotify ver..txt",
+        "additionalInfo": "additional_info/SaphireLeFleur/ROI (Videoclub on Hardcore) - Spotify ver..txt"
+    },
+    {
         "name": "VIDEOCLUB - Roi",
         "path": "music/VIDEOCLUB/Roi.wav",
         "lyrics": "lyrics/VIDEOCLUB/Roi.txt",
