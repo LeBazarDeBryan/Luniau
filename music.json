@@ -1,5 +1,13 @@
 [
     {
+        "name": "Dutch Disorder - Heroine (Pat B Remix) [TOZA Edit]",
+        "path": "music/Dutch Disorder/Heroine (Pat B Remix) [TOZA Edit].wav",
+        "lyrics": "lyrics/Dutch Disorder/Heroine (Pat B Remix) [TOZA Edit].txt",
+        "cover": "covers/Dutch Disorder/Heroine (Pat B Remix) [TOZA Edit].jpg",
+        "date": "dates/Dutch Disorder/Heroine (Pat B Remix) [TOZA Edit].txt",
+        "additionalInfo": "additional_info/Dutch Disorder/Heroine (Pat B Remix) [TOZA Edit].txt"
+    },
+    {
         "name": "Kanye West - On Sight",
         "path": "music/Kanye West/On Sight.wav",
         "lyrics": "lyrics/Kanye West/On Sight.txt",
@@ -14,6 +22,22 @@
         "cover": "covers/LEOJ/Just Dance (Hardstyle Remix).jpg",
         "date": "dates/LEOJ/Just Dance (Hardstyle Remix).txt",
         "additionalInfo": "additional_info/LEOJ/Just Dance (Hardstyle Remix).txt"
+    },
+    {
+        "name": "LEOJ - Just Dance (Hardstyle Remix) (Speed Up)",
+        "path": "music/LEOJ/Just Dance (Hardstyle Remix) (Speed Up).wav",
+        "lyrics": "lyrics/LEOJ/Just Dance (Hardstyle Remix) (Speed Up).txt",
+        "cover": "covers/LEOJ/Just Dance (Hardstyle Remix) (Speed Up).jpg",
+        "date": "dates/LEOJ/Just Dance (Hardstyle Remix) (Speed Up).txt",
+        "additionalInfo": "additional_info/LEOJ/Just Dance (Hardstyle Remix) (Speed Up).txt"
+    },
+    {
+        "name": "NeoFX - Sacr\u00e9 Bob l'\u00c9ponge (Hardcore Remix)",
+        "path": "music/NeoFX/Sacr\u00e9 Bob l'\u00c9ponge (Hardcore Remix).wav",
+        "lyrics": "lyrics/NeoFX/Sacr\u00e9 Bob l'\u00c9ponge (Hardcore Remix).txt",
+        "cover": "covers/NeoFX/Sacr\u00e9 Bob l'\u00c9ponge (Hardcore Remix).jpg",
+        "date": "dates/NeoFX/Sacr\u00e9 Bob l'\u00c9ponge (Hardcore Remix).txt",
+        "additionalInfo": "additional_info/NeoFX/Sacr\u00e9 Bob l'\u00c9ponge (Hardcore Remix).txt"
     },
     {
         "name": "SaphireLeFleur - ROI (Videoclub on Hardcore)",
@@ -40,6 +64,14 @@
         "additionalInfo": "additional_info/VIDEOCLUB/Roi.txt"
     },
     {
+        "name": "Veridis Project - Kalash Hyperpop",
+        "path": "music/Veridis Project/Kalash Hyperpop.wav",
+        "lyrics": "lyrics/Veridis Project/Kalash Hyperpop.txt",
+        "cover": "covers/Veridis Project/Kalash Hyperpop.jpg",
+        "date": "dates/Veridis Project/Kalash Hyperpop.txt",
+        "additionalInfo": "additional_info/Veridis Project/Kalash Hyperpop.txt"
+    },
+    {
         "name": "Yves Tumor - Limerence",
         "path": "music/Yves Tumor/Limerence.wav",
         "lyrics": "lyrics/Yves Tumor/Limerence.txt",
@@ -54,6 +86,14 @@
         "cover": "covers/Yves Tumor/Limerence (Instrumental).jpg",
         "date": "dates/Yves Tumor/Limerence (Instrumental).txt",
         "additionalInfo": "additional_info/Yves Tumor/Limerence (Instrumental).txt"
+    },
+    {
+        "name": "murkish - WASTED (Bootleg Edit) (ft. huken)",
+        "path": "music/murkish/WASTED (Bootleg Edit) (ft. huken).wav",
+        "lyrics": "lyrics/murkish/WASTED (Bootleg Edit) (ft. huken).txt",
+        "cover": "covers/murkish/WASTED (Bootleg Edit) (ft. huken).jpg",
+        "date": "dates/murkish/WASTED (Bootleg Edit) (ft. huken).txt",
+        "additionalInfo": "additional_info/murkish/WASTED (Bootleg Edit) (ft. huken).txt"
     },
     {
         "name": "saraunh0ly - wutiwant",
