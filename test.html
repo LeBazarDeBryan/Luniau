@@ -263,7 +263,7 @@ function fetchFileContent(filePath) {
             }
             return response.text();
         })
-        .catch(() => '404: Not found.');
+        .catch(() => 'Not found.');
 }
 
     document.addEventListener('DOMContentLoaded', loadMusicFiles);
