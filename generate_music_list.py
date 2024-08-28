@@ -1,9 +1,9 @@
 import os
 import json
 
-def list_files(start_directory, extensions, lyrics_base_directory):
+def list_files(start_directory, extensions, lyrics_directory, covers_directory, dates_directory, additional_info_directory):
     matching_files = []
-    
+
     for root, dirs, files in os.walk(start_directory):
         for file in files:
             if any(file.endswith(ext) for ext in extensions):
@@ -12,21 +12,22 @@ def list_files(start_directory, extensions, lyrics_base_directory):
                 title = os.path.splitext(file)[0]
                 file_name = f"{author} - {title}"
 
-                lyrics_file_path = os.path.join(lyrics_base_directory, author, f"{title}.txt")
-                lyrics = ""
+                cover_path = os.path.join(covers_directory, author, f"{title}.jpg")
+                lyrics_path = os.path.join(lyrics_directory, author, f"{title}.txt")
+                date_path = os.path.join(dates_directory, author, f"{title}.txt")
+                additional_info_path = os.path.join(additional_info_directory, author, f"{title}.txt")
                 
-                if os.path.exists(lyrics_file_path):
-                    with open(lyrics_file_path, 'r') as lyrics_file:
-                        lyrics = lyrics_file.read()
-
                 matching_files.append({
                     "name": file_name,
                     "path": file_path,
-                    "lyrics": lyrics
+                    "lyrics": lyrics_path,
+                    "cover": cover_path,
+                    "date": date_path,
+                    "additionalInfo": additional_info_path
                 })
-    
+
     matching_files.sort(key=lambda x: x['name'])
-    
+
     return matching_files
 
 def update_json_file(json_file, data):
@@ -35,9 +36,12 @@ def update_json_file(json_file, data):
 
 start_directory = 'music'
 extensions = ['.wav', '.flac']
-lyrics_base_directory = 'lyrics'
+lyrics_directory = 'lyrics'
+covers_directory = 'covers'
+dates_directory = 'dates'
+additional_info_directory = 'additional_info'
 json_file = 'music.json'
 
-files = list_files(start_directory, extensions, lyrics_base_directory)
+files = list_files(start_directory, extensions, lyrics_directory, covers_directory, dates_directory, additional_info_directory)
 update_json_file(json_file, files)
-print(f'Fichier JSON mis à jour avec {len(files)} fichiers.')
+print(f'JSON file updated with {len(files)} files.')
