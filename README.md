@@ -59,4 +59,5 @@ ___
   - [ ] Add more information for songs.
   - [ ] Add lyrics.
   - [ ] Replace the font to not use google font.
+  - [ ] Make a new window when a link is clicked.
 </details>
