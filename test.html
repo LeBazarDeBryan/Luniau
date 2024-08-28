@@ -151,12 +151,13 @@
             width: 80%;
             max-width: 600px;
             border-radius: 10px;
+            text-align: left;
         }
         .modal-content img {
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 10px 0;
+            margin: 0 auto 10px;
         }
         .close {
             color: #aaa;
@@ -197,6 +198,7 @@
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
+            <img id="modal-cover" src="" alt="Cover Image" style="display: none;">
             <h2 id="modal-title">Title</h2>
             <p id="modal-content">Content goes here...</p>
         </div>
@@ -267,9 +269,7 @@
     const closeModal = document.querySelector('.close');
     const modalTitle = document.getElementById('modal-title');
     const modalContent = document.getElementById('modal-content');
-    const modalImage = document.createElement('img');
-
-    modalContent.appendChild(modalImage);
+    const modalCover = document.getElementById('modal-cover');
 
     toggleBtn.addEventListener('click', () => {
         panel.classList.toggle('hidden');
@@ -278,8 +278,8 @@
     function openModal(title, content, imageSrc = '') {
         modalTitle.textContent = title;
         modalContent.innerHTML = content.replace(/\n/g, '<br>');
-        modalImage.src = imageSrc;
-        modalImage.style.display = imageSrc ? 'block' : 'none';
+        modalCover.src = imageSrc;
+        modalCover.style.display = imageSrc ? 'block' : 'none';
         modal.style.display = 'block';
     }
 
