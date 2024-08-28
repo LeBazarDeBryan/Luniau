@@ -16,7 +16,7 @@
 </details>
 
 <details><summary><h1>Quality</h1></summary>
-  <p>Audio quality is 1536 Kbit/s. I plan to change the quality if I can.</p>
+  <p>Audio quality is 1411-1536 Kbit/s. I plan to change the quality if I can.</p>
 </details>
 
 ___
