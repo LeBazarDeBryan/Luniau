@@ -255,11 +255,16 @@
             .catch(error => console.error('Error loading file list:', error));
     }
 
-    function fetchFileContent(filePath) {
-        return fetch(filePath)
-            .then(response => response.text())
-            .catch(() => 'Content not available.');
-    }
+function fetchFileContent(filePath) {
+    return fetch(filePath)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('File not found');
+            }
+            return response.text();
+        })
+        .catch(() => 'The requested file could not be found. Please check the file path and try again.');
+}
 
     document.addEventListener('DOMContentLoaded', loadMusicFiles);
 
