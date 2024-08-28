@@ -276,12 +276,8 @@
     function openModal(title, content, imageSrc = '') {
         modalTitle.textContent = title;
         modalContent.innerHTML = content.replace(/\n/g, '<br>');
-        if (imageSrc) {
-            modalImage.src = imageSrc;
-            modalImage.style.display = 'block';
-        } else {
-            modalImage.style.display = 'none';
-        }
+        modalImage.src = imageSrc;
+        modalImage.style.display = imageSrc ? 'block' : 'none';
         modal.style.display = 'block';
     }
 
@@ -308,6 +304,12 @@
 
     document.getElementById('about-btn').addEventListener('click', () => openModal('About', 'About the application.'));
 
-    closeModal.addEventListener('click', close
+    closeModal.addEventListener('click', closeModalHandler);
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModalHandler();
+        }
+    });
+</script>
 </body>
 </html>
