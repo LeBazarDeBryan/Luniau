@@ -1,7 +1,7 @@
 import os
 import json
 
-def list_files(start_directory, extensions):
+def list_files(start_directory, extensions, lyrics_directory):
     matching_files = []
     
     for root, dirs, files in os.walk(start_directory):
@@ -11,7 +11,18 @@ def list_files(start_directory, extensions):
                 author = os.path.basename(os.path.dirname(file_path))
                 title = os.path.splitext(file)[0]
                 file_name = f"{author} - {title}"
-                matching_files.append({"name": file_name, "path": file_path})
+
+                lyrics_file_path = os.path.join(lyrics_directory, f"{title}.txt")
+                lyrics = ""
+                if os.path.exists(lyrics_file_path):
+                    with open(lyrics_file_path, 'r') as lyrics_file:
+                        lyrics = lyrics_file.read()
+
+                matching_files.append({
+                    "name": file_name,
+                    "path": file_path,
+                    "lyrics": lyrics
+                })
     
     matching_files.sort(key=lambda x: x['name'])
     
@@ -23,8 +34,9 @@ def update_json_file(json_file, data):
 
 start_directory = 'music'
 extensions = ['.wav', '.flac']
+lyrics_directory = 'lyrics'
 json_file = 'music.json'
 
-files = list_files(start_directory, extensions)
+files = list_files(start_directory, extensions, lyrics_directory)
 update_json_file(json_file, files)
 print(f'Fichier JSON mis à jour avec {len(files)} fichiers.')
