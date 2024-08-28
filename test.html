@@ -309,7 +309,7 @@ function fetchFileContent(filePath) {
             .then(lyricsContent => openModal('Lyrics', lyricsContent));
     });
 
-    document.getElementById('about-btn').addEventListener('click', () => openModal('Luniau', '2024-present<br />Luniau is a streaming "platform" that stream high quality audio (1536 Kbit/s). Theres no ads, no trackers, no cookies. I try my best for privacy and quality. You can make a song request <a href="https://github.com/LeBazarDeBryan/Luniau/issues/new?assignees=&labels=&projects=&template=song-request.md&title=%5BREQUEST%5D+Author+-+Name">here</a>. It help me to extend the library.'));
+    document.getElementById('about-btn').addEventListener('click', () => openModal('About Luniau', '2024-present<br /><br />Luniau is a streaming "platform" that stream high-quality audio (1536 Kbit/s). Theres no ads, no trackers, no cookies. I try my best for privacy and quality. You can make a song request <a href="https://github.com/LeBazarDeBryan/Luniau/issues/new?assignees=&labels=&projects=&template=song-request.md&title=%5BREQUEST%5D+Author+-+Name">here</a>. It helps me to extend the library.'));
 
     closeModal.addEventListener('click', closeModalHandler);
     window.addEventListener('click', (event) => {
