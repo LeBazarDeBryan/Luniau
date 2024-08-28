@@ -223,7 +223,7 @@
                             audioPlayer.play()
                                 .catch(error => console.error('Error playing the audio file:', error));
 
-                            lyricsBtn.dataset.lyrics = file.lyrics ? file.lyrics : 'No lyrics available.';
+                            lyricsBtn.dataset.lyrics = file.lyrics || 'No lyrics available.';
                             infoBtn.dataset.cover = file.cover || '';
                             infoBtn.dataset.date = file.date || 'Unknown';
                             infoBtn.dataset.additionalInfo = file.additionalInfo || 'No additional information available.';
@@ -276,8 +276,12 @@
     function openModal(title, content, imageSrc = '') {
         modalTitle.textContent = title;
         modalContent.innerHTML = content.replace(/\n/g, '<br>');
-        modalImage.src = imageSrc;
-        modalImage.style.display = imageSrc ? 'block' : 'none';
+        if (imageSrc) {
+            modalImage.src = imageSrc;
+            modalImage.style.display = 'block';
+        } else {
+            modalImage.style.display = 'none';
+        }
         modal.style.display = 'block';
     }
 
@@ -304,12 +308,6 @@
 
     document.getElementById('about-btn').addEventListener('click', () => openModal('About', 'About the application.'));
 
-    closeModal.addEventListener('click', closeModalHandler);
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            closeModalHandler();
-        }
-    });
-</script>
+    closeModal.addEventListener('click', close
 </body>
 </html>
