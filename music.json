@@ -2,36 +2,57 @@
     {
         "name": "Kanye West - On Sight",
         "path": "music/Kanye West/On Sight.wav",
-        "lyrics": ""
+        "lyrics": "lyrics/Kanye West/On Sight.txt",
+        "cover": "covers/Kanye West/On Sight.jpg",
+        "date": "dates/Kanye West/On Sight.txt",
+        "additionalInfo": "additional_info/Kanye West/On Sight.txt"
     },
     {
         "name": "LEOJ - Just Dance (Hardstyle Remix)",
         "path": "music/LEOJ/Just Dance (Hardstyle Remix).wav",
-        "lyrics": ""
+        "lyrics": "lyrics/LEOJ/Just Dance (Hardstyle Remix).txt",
+        "cover": "covers/LEOJ/Just Dance (Hardstyle Remix).jpg",
+        "date": "dates/LEOJ/Just Dance (Hardstyle Remix).txt",
+        "additionalInfo": "additional_info/LEOJ/Just Dance (Hardstyle Remix).txt"
     },
     {
         "name": "SaphireLeFleur - ROI (Videoclub on Hardcore)",
         "path": "music/SaphireLeFleur/ROI (Videoclub on Hardcore).wav",
-        "lyrics": ""
+        "lyrics": "lyrics/SaphireLeFleur/ROI (Videoclub on Hardcore).txt",
+        "cover": "covers/SaphireLeFleur/ROI (Videoclub on Hardcore).jpg",
+        "date": "dates/SaphireLeFleur/ROI (Videoclub on Hardcore).txt",
+        "additionalInfo": "additional_info/SaphireLeFleur/ROI (Videoclub on Hardcore).txt"
     },
     {
         "name": "VIDEOCLUB - Roi",
         "path": "music/VIDEOCLUB/Roi.wav",
-        "lyrics": "T'en trouveras d'autres des mecs comme moi\nY'en aura plein des gars pour toi\nTes boucles brunes s'\u00e9vaporent\nDans mon \u00e2me, dans mon corps\n\nJe te cherche dans mes songes, je te traque dans mes r\u00eaves\n\u00c0 l\u2019aube ou dans mon ombre, \u00e8re en vaine sur tes l\u00e8vres\n\u00c9corchant les ab\u00eemes de mon c\u0153ur \u00e9carlate\nTu n'es que le point fixe de mes songes disparates\nAime-moi dans la neige, aime-moi sous l'soleil, aime-moi la peau beige dans les fleurs de vermeilles\nJ'vois des gens qui courent nus, j'vois des gens qui m'sourient\nMais moi j'plane dans la rue, dans tes yeux, sous la pluie\nEt je reste l'esprit de tes lointains souvenirs, dans mes songes ensevelis, tes larmes, tes rires\nTu es ma femme iconique, tu es mon rubis saphir\nJe suis ta rose lyrique, je suis ces gens qui t'admirent\n\nAime-moi dans la neige, aime-moi sous le soleil, aime-moi la peau beige dans les fleurs de vermeilles\nAime-moi dans la neige, aime-moi sous le soleil, aime-moi la peau beige dans les fleurs de vermeilles\n\nDes jours durant, fuyant la nuit, j'parcours ta peau, j'parcours la ville. La fum\u00e9e suave de ta bouche, file, s\u2019\u00e9chappe de jours en jours\nQuand je r\u00e2le dans la nuit, je suis seule sous mes vices\nJe t'aime quand il pleut tu es la nymphe de mes v\u0153ux, je t'embrasse dans mes r\u00eaves et je t'aime au bout des l\u00e8vres\nJe d\u00e9teste le gout mi\u00e8vre de leurs bouches, de leurs r\u00eaves\nDans la nuit tu me regardes, sous les nuages je divague\nAvec toi je suis roi\nToi je suis roi\nToi je suis roi\nToi je suis roi\n\nAime-moi dans la neige, aime-moi sous le soleil, aime-moi la peau beige dans les fleurs de vermeilles\nAime-moi dans la neige, aime-moi sous le soleil, aime-moi la peau beige dans les fleurs de vermeilles\n\nJ'suis un gar\u00e7on de la nuit, moi je laisse tomber les filles, je n'aime que tes bas r\u00e9silles qui dans mes pens\u00e9e gr\u00e9sillent\nJ'suis un gar\u00e7on de la nuit, moi je laisse tomber les filles, je n'aime que tes bas r\u00e9silles qui dans mes pens\u00e9e gr\u00e9sillent\n\nAime-moi dans la neige, aime-moi sous le soleil, aime-moi la peau beige dans les fleurs de vermeilles\nAime-moi dans la neige, aime-moi sous le soleil, aime-moi la peau beige dans les fleurs de vermeilles"
+        "lyrics": "lyrics/VIDEOCLUB/Roi.txt",
+        "cover": "covers/VIDEOCLUB/Roi.jpg",
+        "date": "dates/VIDEOCLUB/Roi.txt",
+        "additionalInfo": "additional_info/VIDEOCLUB/Roi.txt"
     },
     {
         "name": "Yves Tumor - Limerence",
         "path": "music/Yves Tumor/Limerence.wav",
-        "lyrics": ""
+        "lyrics": "lyrics/Yves Tumor/Limerence.txt",
+        "cover": "covers/Yves Tumor/Limerence.jpg",
+        "date": "dates/Yves Tumor/Limerence.txt",
+        "additionalInfo": "additional_info/Yves Tumor/Limerence.txt"
     },
     {
         "name": "Yves Tumor - Limerence (Instrumental)",
         "path": "music/Yves Tumor/Limerence (Instrumental).wav",
-        "lyrics": ""
+        "lyrics": "lyrics/Yves Tumor/Limerence (Instrumental).txt",
+        "cover": "covers/Yves Tumor/Limerence (Instrumental).jpg",
+        "date": "dates/Yves Tumor/Limerence (Instrumental).txt",
+        "additionalInfo": "additional_info/Yves Tumor/Limerence (Instrumental).txt"
     },
     {
         "name": "saraunh0ly - wutiwant",
         "path": "music/saraunh0ly/wutiwant.wav",
-        "lyrics": ""
+        "lyrics": "lyrics/saraunh0ly/wutiwant.txt",
+        "cover": "covers/saraunh0ly/wutiwant.jpg",
+        "date": "dates/saraunh0ly/wutiwant.txt",
+        "additionalInfo": "additional_info/saraunh0ly/wutiwant.txt"
     }
 ]
