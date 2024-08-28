@@ -221,8 +221,7 @@
                             audioPlayer.src = file.path;
                             audioPlayer.play()
                                 .catch(error => console.error('Error playing the audio file:', error));
-
-                            lyricsBtn.dataset.lyrics = file.lyrics || 'No lyrics available.';
+                            lyricsBtn.dataset.lyrics = file.lyrics ? file.lyrics.replace(/\n/g, '<br>') : 'No lyrics available.';
                         });
 
                         listItem.appendChild(link);
@@ -258,7 +257,7 @@
 
     function openModal(title, content) {
         modalTitle.textContent = title;
-        modalContent.innerHTML = content.replace(/\n/g, '<br>');
+        modalContent.innerHTML = content;
         modal.style.display = 'block';
     }
 
@@ -269,11 +268,7 @@
     document.getElementById('info-btn').addEventListener('click', () => openModal('Info', 'Information about the application.'));
     document.getElementById('lyrics-btn').addEventListener('click', () => {
         const lyrics = document.getElementById('lyrics-btn').dataset.lyrics;
-        if (lyrics) {
-            openModal('Lyrics', lyrics);
-        } else {
-            openModal('Lyrics', 'No lyrics available.');
-        }
+        openModal('Lyrics', lyrics);
     });
     document.getElementById('about-btn').addEventListener('click', () => openModal('About', 'About the application.'));
 
