@@ -38,8 +38,6 @@
             list-style-type: none;
             padding: 0;
             margin: 0;
-            width: 100%;
-            max-width: 600px;
         }
         li {
             margin: 5px 0;
@@ -65,13 +63,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            z-index: 5;
         }
         .custom-audio-player {
             display: flex;
             align-items: center;
             width: 100%;
-            max-width: 800px;
+            max-width: 90%;
             padding: 0 10px;
+            box-sizing: border-box;
+            justify-content: space-between;
         }
         .custom-audio-player button {
             background: none;
@@ -79,7 +80,7 @@
             color: #ffffff;
             font-size: 24px;
             cursor: pointer;
-            margin: 0 5px;
+            margin-right: 10px;
         }
         .custom-audio-player button:disabled {
             color: #555555;
@@ -87,12 +88,13 @@
         }
         .progress-container {
             flex: 1;
+            margin: 0 10px;
+            position: relative;
             height: 5px;
             background-color: #ffffff;
             border-radius: 2.5px;
             cursor: pointer;
-            margin: 0 10px;
-            position: relative;
+            max-width: 100%;
         }
         .progress-bar {
             height: 100%;
@@ -103,7 +105,7 @@
         .current-time, .duration {
             font-size: 14px;
             margin: 0 5px;
-            min-width: 50px;
+            min-width: 40px;
             text-align: right;
         }
         input[type="text"] {
@@ -122,11 +124,11 @@
         .panel-right {
             position: fixed;
             top: 50%;
-            right: 0;
+            right: 50px;
             transform: translateY(-50%);
             background-color: #502480;
             padding: 10px;
-            border-radius: 20px 0 0 20px;
+            border-radius: 20px 20px 20px 20px;
             box-shadow: -2px 0 10px rgba(255, 255, 255, 0.3);
             display: flex;
             flex-direction: column;
@@ -185,10 +187,10 @@
         .modal-content {
             background-color: #000000;
             color: #ffffff;
-            margin: 5% auto;
+            margin: 15% auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 90%;
+            width: 80%;
             max-width: 600px;
             border-radius: 10px;
             text-align: left;
@@ -212,22 +214,22 @@
             cursor: pointer;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            .custom-audio-player {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0 5px;
+            }
+            .progress-container {
+                height: 4px;
+            }
             .custom-audio-player button {
-                font-size: 18px;
+                font-size: 20px;
+                margin: 5px;
             }
             .current-time, .duration {
                 font-size: 12px;
-            }
-            .panel-right {
-                right: -200px;
-                width: 180px;
-            }
-            .panel-right.hidden {
-                transform: translateY(-50%) translateX(200px);
-            }
-            .toggle-panel-btn {
-                right: 180px;
+                min-width: 30px;
             }
         }
     </style>
@@ -272,15 +274,15 @@
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2 id="modal-title">Modal Title</h2>
-            <img id="modal-cover" src="" alt="Cover Image">
-            <div id="modal-content">Modal Content</div>
+            <img id="modal-cover" src="" alt="Cover">
+            <h2 id="modal-title"></h2>
+            <div id="modal-content"></div>
         </div>
     </div>
 
     <script>
         function loadMusicFiles() {
-            fetch('path/to/your/files.json')
+            fetch('files.json')
                 .then(response => response.json())
                 .then(files => {
                     const fileList = document.getElementById('file-list');
