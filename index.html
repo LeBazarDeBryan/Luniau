@@ -176,7 +176,14 @@
 <body>
     <div class="container">
         <p>BETA</p>
-        <a href="https://github.com/LeBazarDeBryan/Luniau#readme"><img src="banner/IMG_01.png" alt="" /></a>
+        <a href="https://github.com/LeBazarDeBryan/Luniau#readme">
+            <img src="" id="banner" alt="Luniau">
+        </a>
+        <script type="text/javascript">
+            var images = ['banner/IMG_01.png', 'banner/IMG_02.png', 'banner/IMG_03.png', 'banner/IMG_04.png', 'banner/IMG_05.png', 'banner/IMG_06.png', 'banner/IMG_07.png'];
+            document.getElementById('banner').src = images[Math.floor(Math.random() * images.length)];
+        </script>
+
         <input type="text" id="search-box" placeholder="Search for music...">
         <ul id="file-list"></ul>
     </div>
