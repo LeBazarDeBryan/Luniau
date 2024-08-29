@@ -183,25 +183,20 @@
             var images = ['banner/IMG_01.png', 'banner/IMG_02.png', 'banner/IMG_03.png', 'banner/IMG_04.png', 'banner/IMG_05.png', 'banner/IMG_06.png', 'banner/IMG_07.png'];
             document.getElementById('banner').src = images[Math.floor(Math.random() * images.length)];
         </script>
-
         <input type="text" id="search-box" placeholder="Search for music...">
         <ul id="file-list"></ul>
     </div>
-
     <div class="panel-right hidden">
         <button id="info-btn">Info</button>
         <button id="lyrics-btn">Lyrics</button>
         <button id="about-btn">About</button>
     </div>
-
     <button class="toggle-panel-btn">☰</button>
-
     <div class="audio-container">
         <audio id="audio-player" controls>
             <p>Your browser doesn't support audio player.</p>
         </audio>
     </div>
-
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
