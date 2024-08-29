@@ -88,6 +88,14 @@
         "additionalInfo": "additional_info/Veridis Project/Kalash Hyperpop.txt"
     },
     {
+        "name": "Veridis Project - ROI DE SEVRAN",
+        "path": "music/Veridis Project/ROI DE SEVRAN.wav",
+        "lyrics": "lyrics/Veridis Project/ROI DE SEVRAN.txt",
+        "cover": "covers/Veridis Project/ROI DE SEVRAN.jpg",
+        "date": "dates/Veridis Project/ROI DE SEVRAN.txt",
+        "additionalInfo": "additional_info/Veridis Project/ROI DE SEVRAN.txt"
+    },
+    {
         "name": "Yves Tumor - Limerence",
         "path": "music/Yves Tumor/Limerence.wav",
         "lyrics": "lyrics/Yves Tumor/Limerence.txt",
