@@ -56,8 +56,9 @@ ___
   - [x] Change the font.
   - [x] Move the player to the bottom and make it wide.
   - [x] Add a search box.
-  - [ ] Add more information for songs.
-  - [ ] Add lyrics.
+  - [x] Add more information for songs.
+  - [x] Add lyrics.
+  - [ ] Make my own player
   - [ ] Replace the font to not use google font.
   - [ ] Make a new window when a link is clicked.
 </details>
