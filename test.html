@@ -210,19 +210,42 @@
             text-decoration: none;
             cursor: pointer;
         }
-
-        @media (max-width: 768px) {
-            .audio-controls button {
-                font-size: 20px;
-                margin: 5px;
-            }
-            .progress-container {
-                height: 4px;
-            }
-            .current-time, .duration {
-                font-size: 12px;
-            }
+		.settings-panel {
+			position: fixed;
+			top: 0;
+			right: -350px;
+			width: 300px;
+			height: 100%;
+			background-color: #502480;
+			transition: right 0.3s ease;
+			padding: 20px;
+			box-shadow: -2px 0 10px rgba(255, 255, 255, 0.5);
+			z-index: 10;
+		}
+		.settings-panel.show {
+			right: 0;
+		}
+        .settings-panel label {
+            display: block;
+            margin-bottom: 10px;
         }
+        .settings-panel input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .settings-panel .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+		.settings-panel,
+		.panel-right,
+		.audio-container,
+		.toggle-panel-btn {
+		box-shadow: -2px 0 10px rgba(255, 255, 255, 0.5);
+		transition: box-shadow 0.3s ease;
+		}
     </style>
 </head>
 <body>
@@ -244,6 +267,7 @@
         <button id="info-btn">Info</button>
         <button id="lyrics-btn">Lyrics</button>
         <button id="about-btn">About</button>
+        <button id="settings-btn">Settings</button>
     </div>
 
     <button class="toggle-panel-btn">☰</button>
@@ -260,7 +284,7 @@
         </div>
         <div class="timer-container">
             <span class="current-time" id="current-time">00:00</span>
-			<p>/</p>
+            <p>/</p>
             <span class="duration" id="duration">00:00</span>
         </div>
     </div>
@@ -272,6 +296,14 @@
             <h2 id="modal-title"></h2>
             <div id="modal-content"></div>
         </div>
+    </div>
+
+    <div id="settings-panel" class="settings-panel">
+        <span class="close">❌</span>
+        <h2>Settings</h2>
+        <label><input type="checkbox" id="rgb-cycle-toggle">RGB</label>
+        <label><input type="checkbox" id="setting2"> Option 2</label>
+        <label><input type="checkbox" id="setting3"> Option 3</label>
     </div>
 
     <script>
@@ -410,56 +442,103 @@
         }
 
         document.addEventListener('DOMContentLoaded', loadMusicFiles);
+		
+		const panel = document.querySelector('.panel-right');
+		const toggleBtn = document.querySelector('.toggle-panel-btn');
+		const modal = document.getElementById('modal');
+		const closeModal = document.querySelector('.close');
+		const modalTitle = document.getElementById('modal-title');
+		const modalContent = document.getElementById('modal-content');
+		const modalCover = document.getElementById('modal-cover');
+		const settingsPanel = document.getElementById('settings-panel');
+		const settingsBtn = document.getElementById('settings-btn');
+		const closeSettingsBtn = document.querySelector('#settings-panel .close');
+		const rgbCycleToggle = document.getElementById('rgb-cycle-toggle');
 
-        const panel = document.querySelector('.panel-right');
-        const toggleBtn = document.querySelector('.toggle-panel-btn');
-        const modal = document.getElementById('modal');
-        const closeModal = document.querySelector('.close');
-        const modalTitle = document.getElementById('modal-title');
-        const modalContent = document.getElementById('modal-content');
-        const modalCover = document.getElementById('modal-cover');
+		const elementsWithShadow = [
+			settingsPanel,
+			panel,
+			document.querySelector('.audio-container')
+		];
 
-        toggleBtn.addEventListener('click', () => {
-            panel.classList.toggle('hidden');
-        });
+		let rgbCycleInterval;
 
-        function openModal(title, content, imageSrc = '') {
-            modalTitle.textContent = title;
-            modalContent.innerHTML = content.replace(/\n/g, '<br>');
-            modalCover.src = imageSrc;
-            modalCover.style.display = imageSrc ? 'block' : 'none';
-            modal.style.display = 'block';
-        }
+		function startRgbCycle() {
+			let hue = 0;
+			rgbCycleInterval = setInterval(() => {
+				hue = (hue + 1) % 360;
+				const shadowColor = `hsl(${hue}, 100%, 50%)`;
 
-        function closeModalHandler() {
-            modal.style.display = 'none';
-        }
+				elementsWithShadow.forEach(element => {
+					element.style.boxShadow = `-2px 0 10px ${shadowColor}`;
+				});
+			}, 30);
+		}
 
-        document.getElementById('info-btn').addEventListener('click', () => {
-            const cover = document.getElementById('info-btn').dataset.cover;
-            const datePath = document.getElementById('info-btn').dataset.date;
-            const additionalInfoPath = document.getElementById('info-btn').dataset.additionalInfo;
+		function stopRgbCycle() {
+			clearInterval(rgbCycleInterval);
+			elementsWithShadow.forEach(element => {
+				element.style.boxShadow = `-2px 0 10px rgba(255, 255, 255, 0.5)`;
+			});
+		}
 
-            Promise.all([fetchFileContent(datePath), fetchFileContent(additionalInfoPath)])
-                .then(([dateContent, additionalInfoContent]) => {
-                    openModal('Info', `Date: ${dateContent}<br /><br />Additional Information: ${additionalInfoContent}`, cover);
-                });
-        });
+		rgbCycleToggle.addEventListener('change', () => {
+			if (rgbCycleToggle.checked) {
+				startRgbCycle();
+			} else {
+				stopRgbCycle();
+			}
+		});
 
-        document.getElementById('lyrics-btn').addEventListener('click', () => {
-            const lyricsPath = document.getElementById('lyrics-btn').dataset.lyrics;
-            fetchFileContent(lyricsPath)
-                .then(lyricsContent => openModal('Lyrics', lyricsContent));
-        });
+		toggleBtn.addEventListener('click', () => {
+			panel.classList.toggle('hidden');
+		});
 
-        document.getElementById('about-btn').addEventListener('click', () => openModal('About Luniau', '2024-present<br /><br />Luniau is a streaming "platform" that streams high-quality audio (1411-1536 Kbit/s). There are no ads, no trackers, no cookies. I try my best for privacy and quality. You can make a song request <a href="https://github.com/LeBazarDeBryan/Luniau/issues/new?assignees=&labels=&projects=&template=song-request.md&title=%5BREQUEST%5D+Author+-+Name">here</a>. It helps me to extend the library.<br /><br />Format<br />The date format is DD/MM/YYYY. The music format is <a href="https://en.wikipedia.org/wiki/WAV">WAV</a>.'));
+		settingsBtn.addEventListener('click', () => {
+			settingsPanel.classList.add('show');
+		});
 
-        closeModal.addEventListener('click', closeModalHandler);
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                closeModalHandler();
-            }
-        });
+		closeSettingsBtn.addEventListener('click', () => {
+			settingsPanel.classList.remove('show');
+		});
+
+		function openModal(title, content, imageSrc = '') {
+			modalTitle.textContent = title;
+			modalContent.innerHTML = content.replace(/\n/g, '<br>');
+			modalCover.src = imageSrc;
+			modalCover.style.display = imageSrc ? 'block' : 'none';
+			modal.style.display = 'block';
+		}
+
+		function closeModalHandler() {
+			modal.style.display = 'none';
+		}
+
+		document.getElementById('info-btn').addEventListener('click', () => {
+			const cover = document.getElementById('info-btn').dataset.cover;
+			const datePath = document.getElementById('info-btn').dataset.date;
+			const additionalInfoPath = document.getElementById('info-btn').dataset.additionalInfo;
+
+			Promise.all([fetchFileContent(datePath), fetchFileContent(additionalInfoPath)])
+				.then(([dateContent, additionalInfoContent]) => {
+					openModal('Info', `Date: ${dateContent}<br /><br />Additional Information: ${additionalInfoContent}`, cover);
+				});
+		});
+
+		document.getElementById('lyrics-btn').addEventListener('click', () => {
+			const lyricsPath = document.getElementById('lyrics-btn').dataset.lyrics;
+			fetchFileContent(lyricsPath)
+				.then(lyricsContent => openModal('Lyrics', lyricsContent));
+		});
+
+		document.getElementById('about-btn').addEventListener('click', () => openModal('About Luniau', '2024-present<br /><br />Luniau is a streaming "platform" that streams high-quality audio (1411-1536 Kbit/s). There are no ads, no trackers, no cookies. I try my best for privacy and quality. You can make a song request <a href="https://github.com/LeBazarDeBryan/Luniau/issues/new?assignees=&labels=&projects=&template=song-request.md&title=%5BREQUEST%5D+Author+-+Name">here</a>. It helps me to extend the library.<br /><br />Format<br />The date format is DD/MM/YYYY. The music format is <a href="https://en.wikipedia.org/wiki/WAV">WAV</a>.'));
+
+		closeModal.addEventListener('click', closeModalHandler);
+		window.addEventListener('click', (event) => {
+			if (event.target === modal) {
+				closeModalHandler();
+			}
+		});
     </script>
 </body>
 </html>
