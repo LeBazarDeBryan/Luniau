@@ -1,5 +1,13 @@
 [
     {
+        "name": "DJ MAXZZ - MONTAGEM VOZES PROFUNDAS",
+        "path": "music/DJ MAXZZ/MONTAGEM VOZES PROFUNDAS.wav",
+        "lyrics": "lyrics/DJ MAXZZ/MONTAGEM VOZES PROFUNDAS.txt",
+        "cover": "covers/DJ MAXZZ/MONTAGEM VOZES PROFUNDAS.jpg",
+        "date": "dates/DJ MAXZZ/MONTAGEM VOZES PROFUNDAS.txt",
+        "additionalInfo": "additional_info/DJ MAXZZ/MONTAGEM VOZES PROFUNDAS.txt"
+    },
+    {
         "name": "Dutch Disorder - Heroine (Cryogenic feat. Unlocked The Uptempo Edit)",
         "path": "music/Dutch Disorder/Heroine (Cryogenic feat. Unlocked The Uptempo Edit).wav",
         "lyrics": "lyrics/Dutch Disorder/Heroine (Cryogenic feat. Unlocked The Uptempo Edit).txt",
