@@ -62,39 +62,34 @@
             border-radius: 50px;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             z-index: 5;
         }
-        .custom-audio-player {
+        .audio-controls {
             display: flex;
             align-items: center;
-            width: 100%;
-            max-width: 90%;
-            padding: 0 10px;
-            box-sizing: border-box;
-            justify-content: space-between;
+            margin-left: 10px;
         }
-        .custom-audio-player button {
+        .audio-controls button {
             background: none;
             border: none;
             color: #ffffff;
             font-size: 24px;
             cursor: pointer;
-            margin: 0 10px;
+            margin-right: 10px;
         }
-        .custom-audio-player button:disabled {
+        .audio-controls button:disabled {
             color: #555555;
             cursor: not-allowed;
         }
         .progress-container {
             flex: 1;
             margin: 0 10px;
-            position: relative;
             height: 5px;
             background-color: #ffffff;
             border-radius: 2.5px;
+            position: relative;
             cursor: pointer;
-            max-width: 100%;
         }
         .progress-bar {
             height: 100%;
@@ -102,11 +97,14 @@
             width: 0;
             border-radius: 2.5px;
         }
+        .timer-container {
+            display: flex;
+            align-items: center;
+            min-width: 80px;
+            margin-right: 10px;
+        }
         .current-time, .duration {
             font-size: 14px;
-            margin: 0 5px;
-            min-width: 40px;
-            text-align: right;
         }
         input[type="text"] {
             padding: 10px;
@@ -128,7 +126,7 @@
             transform: translateY(-50%);
             background-color: #502480;
             padding: 10px;
-            border-radius: 20px 20px 20px 20px;
+            border-radius: 20px;
             box-shadow: -2px 0 10px rgba(255, 255, 255, 0.3);
             display: flex;
             flex-direction: column;
@@ -215,21 +213,15 @@
         }
 
         @media (max-width: 768px) {
-            .custom-audio-player {
-                flex-direction: column;
-                align-items: stretch;
-                padding: 0 5px;
+            .audio-controls button {
+                font-size: 20px;
+                margin: 5px;
             }
             .progress-container {
                 height: 4px;
             }
-            .custom-audio-player button {
-                font-size: 20px;
-                margin: 5px;
-            }
             .current-time, .duration {
                 font-size: 12px;
-                min-width: 30px;
             }
         }
     </style>
@@ -258,17 +250,18 @@
     <button class="toggle-panel-btn">☰</button>
 
     <div class="audio-container">
-        <div class="custom-audio-player">
-            <div class="button-container">
-                <button id="prev-btn">⏮</button>
-                <button id="play-btn">▶</button>
-                <button id="pause-btn" style="display: none;">⏸</button>
-                <button id="next-btn">⏭</button>
-            </div>
-            <span class="current-time" id="current-time">00:00</span>
-            <div class="progress-container" id="progress-container">
+        <div class="audio-controls">
+            <button id="prev-btn">⏮</button>
+            <button id="play-btn">▶</button>
+            <button id="pause-btn" style="display: none;">⏸</button>
+            <button id="next-btn">⏭</button>
+        </div>
+        <div class="progress-container" id="progress-container">
             <div class="progress-bar" id="progress-bar"></div>
-            </div>
+        </div>
+        <div class="timer-container">
+            <span class="current-time" id="current-time">00:00</span>
+			<p>/</p>
             <span class="duration" id="duration">00:00</span>
         </div>
     </div>
