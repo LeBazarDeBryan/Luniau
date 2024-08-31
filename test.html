@@ -501,6 +501,7 @@
 		});
 
 		toggleBtn.addEventListener('click', () => {
+			document.title = 'Now Playing: ' + audioPlayer.src.split('/').pop();
 			panel.classList.toggle('hidden');
 		});
 
