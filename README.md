@@ -21,6 +21,16 @@ ___
   <p>Audio quality is 1411-1536 Kbit/s. I plan to change the quality if I can.</p>
 </details>
 
+<details><summary><h1>Instances</h1></summary>
+<div align="center">
+
+  | Owner | Name | Type | Link |
+  |-------|------|------|------|
+  | <a href="https://github.com/LeBazarDeBryan">Félx</a>  | Official GitHub | https | https://lebazardebryan.github.io/Luniau |
+  | <a href="https://github.com/LeBazarDeBryan">Félx</a>  | Official Vercel | https | https://luniau.vercel.app |
+</div>
+</details>
+
 ___
 
 <h1>Questions</h1>
