@@ -327,11 +327,6 @@
                     const progressContainer = document.getElementById('progress-container');
                     const currentTime = document.getElementById('current-time');
                     const duration = document.getElementById('duration');
-					
-					function updateTitleAndAudio(song) {
-						audioPlayer.src = song.path;
-						document.title = `${song.name}`;	
-					}
 
                     let currentTrackIndex = 0;
                     let tracks = [];
