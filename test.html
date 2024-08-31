@@ -128,11 +128,9 @@
             background-color: #502480;
             padding: 10px;
             border-radius: 20px;
-            box-shadow: -2px 0 10px rgba(255, 255, 255, 0.3);
             display: flex;
             flex-direction: column;
             align-items: center;
-            transition: transform 0.3s ease, opacity 0.3s ease;
             opacity: 1;
             z-index: 5;
         }
@@ -220,9 +218,7 @@
 			width: 300px;
 			height: 100%;
 			background-color: #502480;
-			transition: right 0.3s ease;
 			padding: 20px;
-			box-shadow: -2px 0 10px rgba(255, 255, 255, 0.5);
 			z-index: 10;
 		}
 		.settings-panel.show {
@@ -245,9 +241,9 @@
 		.settings-panel,
 		.panel-right,
 		.audio-container,
-		.modal-content	{
+		.modal-content {
 			box-shadow: -2px 0 10px rgba(255, 255, 255, 0.5);
-			transition: box-shadow 0.3s ease;
+			transition: box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease, right 0.3s ease;
 		}
     </style>
 </head>
