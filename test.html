@@ -82,7 +82,8 @@
 			cursor: not-allowed;
 		}
 		.progress-container {
-			width: 90%;
+			width: 80%;
+			max-width: 600px;
 			height: 5px;
 			background-color: #ffffff;
 			border-radius: 2.5px;
@@ -361,7 +362,7 @@
                     }
 
                     function updateProgress() {
-                        const progress = (audioPlayer.currentTime / audioPlayer.duration) * 1000;
+                        const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
                         progressBar.style.width = `${progress}%`;
                         currentTime.textContent = formatTime(audioPlayer.currentTime);
                         duration.textContent = formatTime(audioPlayer.duration);
