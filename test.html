@@ -313,6 +313,10 @@
         function loadMusicFiles() {
             fetch('music.json')
                 .then(response => response.json())
+				.then(data => {
+                audioPlayer.src = data.path;
+				
+                document.title = `${data.name}`;
                 .then(files => {
                     const fileList = document.getElementById('file-list');
                     const audioPlayer = new Audio();
@@ -501,7 +505,6 @@
 		});
 
 		toggleBtn.addEventListener('click', () => {
-			document.title = 'Now Playing: ' + audioPlayer.src.split('/').pop();
 			panel.classList.toggle('hidden');
 		});
 
