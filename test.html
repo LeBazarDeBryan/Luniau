@@ -362,7 +362,7 @@
                     }
 
                     function updateProgress() {
-                        const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                        const progress = (audioPlayer.currentTime / audioPlayer.duration) * 1000;
                         progressBar.style.width = `${progress}%`;
                         currentTime.textContent = formatTime(audioPlayer.currentTime);
                         duration.textContent = formatTime(audioPlayer.duration);
