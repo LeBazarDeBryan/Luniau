@@ -24,10 +24,10 @@ ___
 <details><summary><h1>Instances</h1></summary>
 <div align="center">
 
-  | Owner | Name | Type | Link |
-  |-------|------|------|------|
-  | <a href="https://github.com/LeBazarDeBryan">Félx</a>  | Official GitHub | https | https://lebazardebryan.github.io/Luniau |
-  | <a href="https://github.com/LeBazarDeBryan">Félx</a>  | Official Vercel | https | https://luniau.vercel.app |
+  | Owner | Name | Status | Type | Link |
+  |-------|------|--------|------|------|
+  | <a href="https://github.com/LeBazarDeBryan">Félx</a>  | Official GitHub | [![pages-build-deployment](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/pages/pages-build-deployment) | https | https://lebazardebryan.github.io/Luniau |
+  | <a href="https://github.com/LeBazarDeBryan">Félx</a>  | Official Vercel |  | https | https://luniau.vercel.app |
 </div>
 </details>
 
