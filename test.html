@@ -313,10 +313,6 @@
         function loadMusicFiles() {
             fetch('music.json')
                 .then(response => response.json())
-				.then(data => {
-                audioPlayer.src = data.path;
-				
-                document.title = `${data.name}`;
                 .then(files => {
                     const fileList = document.getElementById('file-list');
                     const audioPlayer = new Audio();
@@ -435,6 +431,10 @@
                     renderFiles(files);
                 })
                 .catch(error => console.error('Error loading file list:', error));
+				.then(data => {
+                audioPlayer.src = data.path;
+				
+                document.title = `${data.name}`;
         }
 
         function fetchFileContent(filePath) {
