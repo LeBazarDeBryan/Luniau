@@ -75,4 +75,5 @@ ___
   - [ ] Add the cover of the song played (notification).
   - [ ] Replace the font to not use google font.
   - [ ] Make a new window when a link is clicked.
+  - [ ] Make a script to run Luniau locally or make an instances.
 </details>
