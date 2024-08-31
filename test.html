@@ -245,20 +245,6 @@
 			box-shadow: -2px 0 10px rgba(255, 255, 255, 0.5);
 			transition: box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease, right 0.3s ease;
 		}
-		ul.separator {
-  list-style: none;
-  padding: 0;
-  width: 100%;
-}
-
-ul.separator li {
-  padding: .5em 0;
-  border-bottom: 1px solid #CCC;
-}
-
-ul.separator li:last-child {
-  border-bottom: 0;
-}
     </style>
 </head>
 <body>
@@ -271,30 +257,23 @@ ul.separator li:last-child {
             var images = ['banner/IMG_01.png', 'banner/IMG_02.png', 'banner/IMG_03.png', 'banner/IMG_04.png', 'banner/IMG_05.png', 'banner/IMG_06.png', 'banner/IMG_07.png'];
             document.getElementById('banner').src = images[Math.floor(Math.random() * images.length)];
         </script>
-
         <input type="text" id="search-box" placeholder="Search for music...">
         <ul id="file-list"></ul>
     </div>
-
     <div class="panel-right hidden">
         <button id="info-btn">Info</button>
         <button id="lyrics-btn">Lyrics</button>
         <button id="about-btn">About</button>
         <button id="settings-btn">Settings</button>
     </div>
-
     <button class="toggle-panel-btn">☰</button>
-
     <div class="audio-container">
         <div class="audio-controls">
-		  <ul class="separator">
-            <button id="prev-btn">⏮</button>
-            <button id="play-btn">▶</button>
-            <button id="pause-btn" style="display: none;">⏸</button>
-            <button id="next-btn">⏭</button>
-		  </ul>
+            <button id="prev-btn" disabled>&#9664;&#9664;</button>
+            <button id="play-btn">&#9654;</button>
+            <button id="pause-btn" style="display: none;">&#10074;&#10074;</button>
+            <button id="next-btn" disabled>&#9654;&#9654;</button>
         </div>
-		
         <div class="progress-container" id="progress-container">
             <div class="progress-bar" id="progress-bar"></div>
         </div>
@@ -304,7 +283,6 @@ ul.separator li:last-child {
             <span class="duration" id="duration">00:00</span>
         </div>
     </div>
-
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -313,13 +291,11 @@ ul.separator li:last-child {
             <div id="modal-content"></div>
         </div>
     </div>
-
     <div id="settings-panel" class="settings-panel">
         <span class="close">❌</span>
         <h2>Settings</h2>
         <label><input type="checkbox" id="partyMode">Party Mode</label>
     </div>
-
     <script>
         function loadMusicFiles() {
             fetch('music.json')
