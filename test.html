@@ -8,208 +8,207 @@
     <title>Luniau BETA</title>
     <style>
         body {
-            background-color: #341d59;
-            color: #ffffff;
-            font-family: "Montserrat Alternates", sans-serif;
-            font-weight: 500;
-            font-style: normal;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            position: relative;
-        }
-        .container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px;
-            box-sizing: border-box;
-        }
-        img {
-            margin-bottom: 20px;
-            max-width: 100%;
-            height: auto;
+			background-color: #341d59;
+			color: #ffffff;
+			font-family: "Montserrat Alternates", sans-serif;
+			font-weight: 500;
+			font-style: normal;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+			position: relative;
+		}
+		.container {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 20px;
+			box-sizing: border-box;
+		}
+		img {
+			margin-bottom: 20px;
+			max-width: 100%;
+			height: auto;
 			box-shadow: -2px 0 10px rgba(255, 255, 255, 0.5);
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        li {
-            margin: 5px 0;
-        }
-        a {
-            cursor: pointer;
-            text-decoration: underline;
-            color: #ffffff;
-        }
-        a:hover {
-            color: #dddddd;
-        }
-        .audio-container {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #341d59;
-            padding: 10px;
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 5;
-        }
-        .audio-controls {
-            display: flex;
-            align-items: center;
-            margin-left: 10px;
-        }
-        .audio-controls button {
-            background: none;
-            border: none;
-            color: #ffffff;
-            font-size: 24px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        .audio-controls button:disabled {
-            color: #555555;
-            cursor: not-allowed;
-        }
-        .progress-container {
-            flex: 1;
-            margin: 0 10px;
-            height: 5px;
-            background-color: #ffffff;
-            border-radius: 2.5px;
-            position: relative;
-            cursor: pointer;
-        }
-        .progress-bar {
-            height: 100%;
-            background-color: #bc8dbc;
-            width: 0;
-            border-radius: 2.5px;
-        }
-        .timer-container {
-            display: flex;
-            align-items: center;
-            min-width: 80px;
-            margin-right: 10px;
-        }
-        .current-time, .duration {
-            font-size: 14px;
-        }
-        input[type="text"] {
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 50px;
-            width: 100%;
-            max-width: 500px;
-            box-sizing: border-box;
-            font-size: 16px;
-            font-family: "Montserrat Alternates", sans-serif;
-            background-color: #341d59;
-            color: #ffffff;
+		}
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+		li {
+			margin: 5px 0;
+		}
+		a {
+			cursor: pointer;
+			text-decoration: underline;
+			color: #ffffff;
+		}
+		a:hover {
+			color: #dddddd;
+		}
+		.audio-container {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background-color: #341d59;
+			padding: 10px;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			z-index: 5;
+		}
+		.audio-controls {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+		.audio-controls button {
+			background: none;
+			border: none;
+			color: #ffffff;
+			font-size: 24px;
+			cursor: pointer;
+			margin: 0 10px;
+		}
+		.audio-controls button:disabled {
+			color: #555555;
+			cursor: not-allowed;
+		}
+		.progress-container {
+			width: 90%;
+			height: 5px;
+			background-color: #ffffff;
+			border-radius: 2.5px;
+			position: relative;
+			cursor: pointer;
+		}
+		.progress-bar {
+			height: 100%;
+			background-color: #bc8dbc;
+			width: 0;
+			border-radius: 2.5px;
+		}
+		.timer-container {
+			display: flex;
+			align-items: center;
+			min-width: 80px;
+			margin-top: 10px;
+		}
+		.current-time, .duration {
+			font-size: 14px;
+		}
+		input[type="text"] {
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 1px solid #ddd;
+			border-radius: 50px;
+			width: 100%;
+			max-width: 500px;
+			box-sizing: border-box;
+			font-size: 16px;
+			font-family: "Montserrat Alternates", sans-serif;
+			background-color: #341d59;
+			color: #ffffff;
 			box-shadow: -2px 0 10px rgba(255, 255, 255, 0.5);
-        }
-        .panel-right {
-            position: fixed;
-            top: 50%;
-            right: 50px;
-            transform: translateY(-50%);
-            background-color: #502480;
-            padding: 10px;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            opacity: 1;
-            z-index: 5;
-        }
-        .panel-right button {
-            background-color: #ffffff;
-            color: #341d59;
-            border: none;
-            padding: 10px 20px;
-            margin: 5px 0;
-            border-radius: 20px;
-            font-family: "Montserrat Alternates", sans-serif;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .panel-right.hidden {
-            transform: translateY(-50%) translateX(100%);
-            opacity: 0;
-            pointer-events: none;
+		}
+		.panel-right {
+			position: fixed;
+			top: 50%;
+			right: 50px;
+			transform: translateY(-50%);
+			background-color: #502480;
+			padding: 10px;
+			border-radius: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			opacity: 1;
+			z-index: 5;
+		}
+		.panel-right button {
+			background-color: #ffffff;
+			color: #341d59;
+			border: none;
+			padding: 10px 20px;
+			margin: 5px 0;
+			border-radius: 20px;
+			font-family: "Montserrat Alternates", sans-serif;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		.panel-right.hidden {
+			transform: translateY(-50%) translateX(100%);
+			opacity: 0;
+			pointer-events: none;
 			transition: transform 0.3s ease, opacity 0.3s ease;
 		}
-        .panel-right button:hover {
-            background-color: #dddddd;
-        }
-        .toggle-panel-btn {
-            position: fixed;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-            background-color: #502480;
-            color: #ffffff;
-            border: none;
-            padding: 15px;
-            border-radius: 10px 0 0 10px;
-            box-shadow: -2px 0 10px rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            z-index: 10;
-        }
-        .toggle-panel-btn:hover {
-            background-color: #341d59;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 100;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.6);
-        }
-        .modal-content {
-            background-color: #000000;
-            color: #ffffff;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
-            border-radius: 10px;
-            text-align: left;
-        }
-        .modal-content img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto 10px;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover,
-        .close:focus {
-            color: #ffffff;
-            text-decoration: none;
-            cursor: pointer;
-        }
+		.panel-right button:hover {
+			background-color: #dddddd;
+		}
+		.toggle-panel-btn {
+			position: fixed;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			background-color: #502480;
+			color: #ffffff;
+			border: none;
+			padding: 15px;
+			border-radius: 10px 0 0 10px;
+			box-shadow: -2px 0 10px rgba(255, 255, 255, 0.5);
+			cursor: pointer;
+			z-index: 10;
+		}
+		.toggle-panel-btn:hover {
+			background-color: #341d59;
+		}
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 100;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+		.modal-content {
+			background-color: #000000;
+			color: #ffffff;
+			margin: 15% auto;
+			padding: 20px;
+			border: 1px solid #888;
+			width: 80%;
+			max-width: 600px;
+			border-radius: 10px;
+			text-align: left;
+		}
+		.modal-content img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: 0 auto 10px;
+		}
+		.close {
+			color: #aaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+		}
+		.close:hover,
+		.close:focus {
+			color: #ffffff;
+			text-decoration: none;
+			cursor: pointer;
+		}
 		.settings-panel {
 			position: fixed;
 			top: 0;
@@ -223,25 +222,25 @@
 		.settings-panel.show {
 			right: 0;
 		}
-        .settings-panel label {
-            display: block;
-            margin-bottom: 10px;
-        }
-        .settings-panel input[type="checkbox"] {
-            margin-right: 10px;
-        }
-        .settings-panel .close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 24px;
-            cursor: pointer;
-        }
+		.settings-panel label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		.settings-panel input[type="checkbox"] {
+			margin-right: 10px;
+		}
+		.settings-panel .close {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			font-size: 24px;
+			cursor: pointer;
+		}
 		.settings-panel,
 		.panel-right,
 		.audio-container,
 		.modal-content,
-		.progress-container	{
+		.progress-container {
 			box-shadow: -2px 0 10px rgba(255, 255, 255, 0.5);
 			transition: box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease, right 0.3s ease;
 		}
