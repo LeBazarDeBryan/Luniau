@@ -48,6 +48,22 @@
         "additionalInfo": "additional_info/LEOJ/Just Dance (Hardstyle Remix) (Speed Up).txt"
     },
     {
+        "name": "Manzbjau - Lucky (DnB)",
+        "path": "music/Manzbjau/Lucky (DnB).wav",
+        "lyrics": "lyrics/Manzbjau/Lucky (DnB).txt",
+        "cover": "covers/Manzbjau/Lucky (DnB).jpg",
+        "date": "dates/Manzbjau/Lucky (DnB).txt",
+        "additionalInfo": "additional_info/Manzbjau/Lucky (DnB).txt"
+    },
+    {
+        "name": "Manzbjau - Lucky (Hardstyle)",
+        "path": "music/Manzbjau/Lucky (Hardstyle).wav",
+        "lyrics": "lyrics/Manzbjau/Lucky (Hardstyle).txt",
+        "cover": "covers/Manzbjau/Lucky (Hardstyle).jpg",
+        "date": "dates/Manzbjau/Lucky (Hardstyle).txt",
+        "additionalInfo": "additional_info/Manzbjau/Lucky (Hardstyle).txt"
+    },
+    {
         "name": "NeoFX - Sacr\u00e9 Bob l'\u00c9ponge (Hardcore Remix)",
         "path": "music/NeoFX/Sacr\u00e9 Bob l'\u00c9ponge (Hardcore Remix).wav",
         "lyrics": "lyrics/NeoFX/Sacr\u00e9 Bob l'\u00c9ponge (Hardcore Remix).txt",
