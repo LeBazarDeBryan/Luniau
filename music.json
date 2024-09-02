@@ -1,5 +1,21 @@
 [
     {
+        "name": "BRZ - I Like The Way You Kiss Me (Hardstyle Frenchcore Remix)",
+        "path": "music/BRZ/I Like The Way You Kiss Me (Hardstyle Frenchcore Remix).wav",
+        "lyrics": "lyrics/BRZ/I Like The Way You Kiss Me (Hardstyle Frenchcore Remix).txt",
+        "cover": "covers/BRZ/I Like The Way You Kiss Me (Hardstyle Frenchcore Remix).jpg",
+        "date": "dates/BRZ/I Like The Way You Kiss Me (Hardstyle Frenchcore Remix).txt",
+        "additionalInfo": "additional_info/BRZ/I Like The Way You Kiss Me (Hardstyle Frenchcore Remix).txt"
+    },
+    {
+        "name": "Babix - Kiss Me Again",
+        "path": "music/Babix/Kiss Me Again.wav",
+        "lyrics": "lyrics/Babix/Kiss Me Again.txt",
+        "cover": "covers/Babix/Kiss Me Again.jpg",
+        "date": "dates/Babix/Kiss Me Again.txt",
+        "additionalInfo": "additional_info/Babix/Kiss Me Again.txt"
+    },
+    {
         "name": "DJ MAXZZ - MONTAGEM VOZES PROFUNDAS",
         "path": "music/DJ MAXZZ/MONTAGEM VOZES PROFUNDAS.wav",
         "lyrics": "lyrics/DJ MAXZZ/MONTAGEM VOZES PROFUNDAS.txt",
@@ -22,6 +38,22 @@
         "cover": "covers/Dutch Disorder/Heroine (Pat B Remix) [TOZA Edit].jpg",
         "date": "dates/Dutch Disorder/Heroine (Pat B Remix) [TOZA Edit].txt",
         "additionalInfo": "additional_info/Dutch Disorder/Heroine (Pat B Remix) [TOZA Edit].txt"
+    },
+    {
+        "name": "FXLSE - Kiss Me Again - Hardstyle",
+        "path": "music/FXLSE/Kiss Me Again - Hardstyle.wav",
+        "lyrics": "lyrics/FXLSE/Kiss Me Again - Hardstyle.txt",
+        "cover": "covers/FXLSE/Kiss Me Again - Hardstyle.jpg",
+        "date": "dates/FXLSE/Kiss Me Again - Hardstyle.txt",
+        "additionalInfo": "additional_info/FXLSE/Kiss Me Again - Hardstyle.txt"
+    },
+    {
+        "name": "Harmless - Swing Lynn",
+        "path": "music/Harmless/Swing Lynn.wav",
+        "lyrics": "lyrics/Harmless/Swing Lynn.txt",
+        "cover": "covers/Harmless/Swing Lynn.jpg",
+        "date": "dates/Harmless/Swing Lynn.txt",
+        "additionalInfo": "additional_info/Harmless/Swing Lynn.txt"
     },
     {
         "name": "Kanye West - On Sight",
@@ -128,6 +160,14 @@
         "additionalInfo": "additional_info/Yves Tumor/Limerence (Instrumental).txt"
     },
     {
+        "name": "kurffew - i dont wna cry (haste)",
+        "path": "music/kurffew/i dont wna cry (haste).wav",
+        "lyrics": "lyrics/kurffew/i dont wna cry (haste).txt",
+        "cover": "covers/kurffew/i dont wna cry (haste).jpg",
+        "date": "dates/kurffew/i dont wna cry (haste).txt",
+        "additionalInfo": "additional_info/kurffew/i dont wna cry (haste).txt"
+    },
+    {
         "name": "murkish - WASTED (Bootleg Edit) (ft. huken)",
         "path": "music/murkish/WASTED (Bootleg Edit) (ft. huken).wav",
         "lyrics": "lyrics/murkish/WASTED (Bootleg Edit) (ft. huken).txt",
@@ -142,5 +182,21 @@
         "cover": "covers/saraunh0ly/wutiwant.jpg",
         "date": "dates/saraunh0ly/wutiwant.txt",
         "additionalInfo": "additional_info/saraunh0ly/wutiwant.txt"
+    },
+    {
+        "name": "twenty one pilots - Ride",
+        "path": "music/twenty one pilots/Ride.wav",
+        "lyrics": "lyrics/twenty one pilots/Ride.txt",
+        "cover": "covers/twenty one pilots/Ride.jpg",
+        "date": "dates/twenty one pilots/Ride.txt",
+        "additionalInfo": "additional_info/twenty one pilots/Ride.txt"
+    },
+    {
+        "name": "twenty one pilots - Stressed Out",
+        "path": "music/twenty one pilots/Stressed Out.wav",
+        "lyrics": "lyrics/twenty one pilots/Stressed Out.txt",
+        "cover": "covers/twenty one pilots/Stressed Out.jpg",
+        "date": "dates/twenty one pilots/Stressed Out.txt",
+        "additionalInfo": "additional_info/twenty one pilots/Stressed Out.txt"
     }
 ]
