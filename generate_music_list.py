@@ -44,4 +44,4 @@ json_file = 'music.json'
 
 files = list_files(start_directory, extensions, lyrics_directory, covers_directory, dates_directory, additional_info_directory)
 update_json_file(json_file, files)
-print(f'JSON file updated with {len(files)} files.')
+print(f'{len(files)} files.')
