@@ -96,6 +96,22 @@
         "additionalInfo": "additional_info/Manzbjau/Lucky (Hardstyle).txt"
     },
     {
+        "name": "Miguel Angeles - FORGOTTEN CHILD",
+        "path": "music/Miguel Angeles/FORGOTTEN CHILD.wav",
+        "lyrics": "lyrics/Miguel Angeles/FORGOTTEN CHILD.txt",
+        "cover": "covers/Miguel Angeles/FORGOTTEN CHILD.jpg",
+        "date": "dates/Miguel Angeles/FORGOTTEN CHILD.txt",
+        "additionalInfo": "additional_info/Miguel Angeles/FORGOTTEN CHILD.txt"
+    },
+    {
+        "name": "Miguel Angeles - FORGOTTEN CHILD (SLOW Version)",
+        "path": "music/Miguel Angeles/FORGOTTEN CHILD (SLOW Version).wav",
+        "lyrics": "lyrics/Miguel Angeles/FORGOTTEN CHILD (SLOW Version).txt",
+        "cover": "covers/Miguel Angeles/FORGOTTEN CHILD (SLOW Version).jpg",
+        "date": "dates/Miguel Angeles/FORGOTTEN CHILD (SLOW Version).txt",
+        "additionalInfo": "additional_info/Miguel Angeles/FORGOTTEN CHILD (SLOW Version).txt"
+    },
+    {
         "name": "NeoFX - Sacr\u00e9 Bob l'\u00c9ponge (Hardcore Remix)",
         "path": "music/NeoFX/Sacr\u00e9 Bob l'\u00c9ponge (Hardcore Remix).wav",
         "lyrics": "lyrics/NeoFX/Sacr\u00e9 Bob l'\u00c9ponge (Hardcore Remix).txt",
