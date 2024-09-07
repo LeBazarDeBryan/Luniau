@@ -112,6 +112,30 @@
         "additionalInfo": "additional_info/Miguel Angeles/FORGOTTEN CHILD (SLOW Version).txt"
     },
     {
+        "name": "Miguel Angeles - PROTECTION CHARM",
+        "path": "music/Miguel Angeles/PROTECTION CHARM.wav",
+        "lyrics": "lyrics/Miguel Angeles/PROTECTION CHARM.txt",
+        "cover": "covers/Miguel Angeles/PROTECTION CHARM.jpg",
+        "date": "dates/Miguel Angeles/PROTECTION CHARM.txt",
+        "additionalInfo": "additional_info/Miguel Angeles/PROTECTION CHARM.txt"
+    },
+    {
+        "name": "Miguel Angeles - PROTECTION CHARM (FAST & HARD VERSION)",
+        "path": "music/Miguel Angeles/PROTECTION CHARM (FAST & HARD VERSION).wav",
+        "lyrics": "lyrics/Miguel Angeles/PROTECTION CHARM (FAST & HARD VERSION).txt",
+        "cover": "covers/Miguel Angeles/PROTECTION CHARM (FAST & HARD VERSION).jpg",
+        "date": "dates/Miguel Angeles/PROTECTION CHARM (FAST & HARD VERSION).txt",
+        "additionalInfo": "additional_info/Miguel Angeles/PROTECTION CHARM (FAST & HARD VERSION).txt"
+    },
+    {
+        "name": "Miguel Angeles - PROTECTION CHARM (SLOW & HARD VERSION)",
+        "path": "music/Miguel Angeles/PROTECTION CHARM (SLOW & HARD VERSION).wav",
+        "lyrics": "lyrics/Miguel Angeles/PROTECTION CHARM (SLOW & HARD VERSION).txt",
+        "cover": "covers/Miguel Angeles/PROTECTION CHARM (SLOW & HARD VERSION).jpg",
+        "date": "dates/Miguel Angeles/PROTECTION CHARM (SLOW & HARD VERSION).txt",
+        "additionalInfo": "additional_info/Miguel Angeles/PROTECTION CHARM (SLOW & HARD VERSION).txt"
+    },
+    {
         "name": "NeoFX - Sacr\u00e9 Bob l'\u00c9ponge (Hardcore Remix)",
         "path": "music/NeoFX/Sacr\u00e9 Bob l'\u00c9ponge (Hardcore Remix).wav",
         "lyrics": "lyrics/NeoFX/Sacr\u00e9 Bob l'\u00c9ponge (Hardcore Remix).txt",
