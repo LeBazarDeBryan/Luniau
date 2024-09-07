@@ -10,8 +10,8 @@ ___
 <details><summary><h1>Status</h1></summary>
 <div align="center">
 
-  | Fonction | Status |
-  |----------|--------|
+  | Name | Status |
+  |------|--------|
   | Music Update | [![Félix](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml/badge.svg)](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/music_list.yml) |
   | Website Deployment | [![pages-build-deployment](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/LeBazarDeBryan/Luniau/actions/workflows/pages/pages-build-deployment) |
 </div>
