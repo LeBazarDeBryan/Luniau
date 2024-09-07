@@ -59,11 +59,10 @@ a:hover {
     box-shadow: -2px 0 10px rgba(255, 255, 255, 0.5);
     border-radius: 15px;
     position: fixed;
-    bottom: 0;
+    bottom: 1%;
     left: 50%;
     transform: translateX(-50%);
 }
-
 .audio-controls button {
     background: none;
     border: none;
@@ -72,31 +71,27 @@ a:hover {
     cursor: pointer;
     margin: 0 5px;
 }
-
 .progress-container {
-    width: 75%;
+    width: 90%;
     max-width: 500px;
     height: 4px;
     background-color: #ffffff;
     border-radius: 2px;
     margin-top: 5px;
 }
-
 .progress-bar {
     height: 100%;
     background-color: #bc8dbc;
     width: 0;
     border-radius: 2px;
 }
-
 .timer-container {
     display: flex;
     justify-content: space-between;
-    width: 75%;
+    width: 90%;
     max-width: 500px;
     margin-top: 5px;
 }
-
 .current-time, .duration {
     font-size: 12px; 
 }
