@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', loadMusicFiles);
 
 const panel = document.querySelector('.panel-right');
 const toggleBtn = document.querySelector('.toggle-panel-btn');
-const modal = document.getElementById('modal');
+const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.close');
 const modalTitle = document.getElementById('modal-title');
 const modalContent = document.getElementById('modal-content');
@@ -164,7 +164,8 @@ const elementsWithShadow = [
     toggleBtn,
     banner,
     searchbox,
-    progressContainer
+    progressContainer,
+	modal
 ];
 
 let rgbCycleInterval;
