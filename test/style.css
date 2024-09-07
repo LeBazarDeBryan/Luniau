@@ -52,7 +52,7 @@
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			z-index: 5;
+			z-index: 1000;
 			width: 100%;
 			max-width: 800px;
 			margin: 0 auto;
@@ -178,6 +178,9 @@
 		}
 		.toggle-panel-btn:hover {
 			background-color: #341d59;
+		}
+		.main-content {
+			margin-bottom: 100px;
 		}
 		.modal {
 			display: none;
