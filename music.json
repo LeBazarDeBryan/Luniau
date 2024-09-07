@@ -160,6 +160,14 @@
         "additionalInfo": "additional_info/Yves Tumor/Limerence (Instrumental).txt"
     },
     {
+        "name": "aldn - icantbelieveiletyougetaway",
+        "path": "music/aldn/icantbelieveiletyougetaway.wav",
+        "lyrics": "lyrics/aldn/icantbelieveiletyougetaway.txt",
+        "cover": "covers/aldn/icantbelieveiletyougetaway.jpg",
+        "date": "dates/aldn/icantbelieveiletyougetaway.txt",
+        "additionalInfo": "additional_info/aldn/icantbelieveiletyougetaway.txt"
+    },
+    {
         "name": "kurffew - i dont wna cry (haste)",
         "path": "music/kurffew/i dont wna cry (haste).wav",
         "lyrics": "lyrics/kurffew/i dont wna cry (haste).txt",
