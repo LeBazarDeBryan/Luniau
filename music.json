@@ -120,6 +120,14 @@
         "additionalInfo": "additional_info/SaphireLeFleur/ROI (Videoclub on Hardcore) - Spotify ver..txt"
     },
     {
+        "name": "TerrorClown - Speedcore Fotze",
+        "path": "music/TerrorClown/Speedcore Fotze.wav",
+        "lyrics": "lyrics/TerrorClown/Speedcore Fotze.txt",
+        "cover": "covers/TerrorClown/Speedcore Fotze.jpg",
+        "date": "dates/TerrorClown/Speedcore Fotze.txt",
+        "additionalInfo": "additional_info/TerrorClown/Speedcore Fotze.txt"
+    },
+    {
         "name": "VIDEOCLUB - Roi",
         "path": "music/VIDEOCLUB/Roi.wav",
         "lyrics": "lyrics/VIDEOCLUB/Roi.txt",
