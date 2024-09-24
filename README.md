@@ -70,7 +70,7 @@ ___
   - [x] Add a search box.
   - [x] Add more information for songs.
   - [x] Add lyrics.
-  - [ ] Make my own player
+  - [x] Make my own player
   - [ ] Change the website title when a song is played.
   - [ ] Add the cover of the song played (notification).
   - [ ] Replace the font to not use google font.
