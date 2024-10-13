@@ -112,6 +112,22 @@
         "additionalInfo": "additional_info/Miguel Angeles/FORGOTTEN CHILD (SLOW Version).txt"
     },
     {
+        "name": "Miguel Angeles - Miguel Angeles - DEATH RATTLE",
+        "path": "music/Miguel Angeles/Miguel Angeles - DEATH RATTLE.wav",
+        "lyrics": "lyrics/Miguel Angeles/Miguel Angeles - DEATH RATTLE.txt",
+        "cover": "covers/Miguel Angeles/Miguel Angeles - DEATH RATTLE.jpg",
+        "date": "dates/Miguel Angeles/Miguel Angeles - DEATH RATTLE.txt",
+        "additionalInfo": "additional_info/Miguel Angeles/Miguel Angeles - DEATH RATTLE.txt"
+    },
+    {
+        "name": "Miguel Angeles - Miguel Angeles - DEATH RATTLE (SLOW Version)",
+        "path": "music/Miguel Angeles/Miguel Angeles - DEATH RATTLE (SLOW Version).wav",
+        "lyrics": "lyrics/Miguel Angeles/Miguel Angeles - DEATH RATTLE (SLOW Version).txt",
+        "cover": "covers/Miguel Angeles/Miguel Angeles - DEATH RATTLE (SLOW Version).jpg",
+        "date": "dates/Miguel Angeles/Miguel Angeles - DEATH RATTLE (SLOW Version).txt",
+        "additionalInfo": "additional_info/Miguel Angeles/Miguel Angeles - DEATH RATTLE (SLOW Version).txt"
+    },
+    {
         "name": "Miguel Angeles - PROTECTION CHARM",
         "path": "music/Miguel Angeles/PROTECTION CHARM.wav",
         "lyrics": "lyrics/Miguel Angeles/PROTECTION CHARM.txt",
