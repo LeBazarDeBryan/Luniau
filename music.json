@@ -16,6 +16,14 @@
         "additionalInfo": "additional_info/Babix/Kiss Me Again.txt"
     },
     {
+        "name": "Bibi Babydoll - OnlyFans",
+        "path": "music/Bibi Babydoll/OnlyFans.wav",
+        "lyrics": "lyrics/Bibi Babydoll/OnlyFans.txt",
+        "cover": "covers/Bibi Babydoll/OnlyFans.jpg",
+        "date": "dates/Bibi Babydoll/OnlyFans.txt",
+        "additionalInfo": "additional_info/Bibi Babydoll/OnlyFans.txt"
+    },
+    {
         "name": "DJ MAXZZ - MONTAGEM VOZES PROFUNDAS",
         "path": "music/DJ MAXZZ/MONTAGEM VOZES PROFUNDAS.wav",
         "lyrics": "lyrics/DJ MAXZZ/MONTAGEM VOZES PROFUNDAS.txt",
@@ -96,6 +104,22 @@
         "additionalInfo": "additional_info/Manzbjau/Lucky (Hardstyle).txt"
     },
     {
+        "name": "Miguel Angeles - DEATH RATTLE",
+        "path": "music/Miguel Angeles/DEATH RATTLE.wav",
+        "lyrics": "lyrics/Miguel Angeles/DEATH RATTLE.txt",
+        "cover": "covers/Miguel Angeles/DEATH RATTLE.jpg",
+        "date": "dates/Miguel Angeles/DEATH RATTLE.txt",
+        "additionalInfo": "additional_info/Miguel Angeles/DEATH RATTLE.txt"
+    },
+    {
+        "name": "Miguel Angeles - DEATH RATTLE (SLOW Version)",
+        "path": "music/Miguel Angeles/DEATH RATTLE (SLOW Version).wav",
+        "lyrics": "lyrics/Miguel Angeles/DEATH RATTLE (SLOW Version).txt",
+        "cover": "covers/Miguel Angeles/DEATH RATTLE (SLOW Version).jpg",
+        "date": "dates/Miguel Angeles/DEATH RATTLE (SLOW Version).txt",
+        "additionalInfo": "additional_info/Miguel Angeles/DEATH RATTLE (SLOW Version).txt"
+    },
+    {
         "name": "Miguel Angeles - FORGOTTEN CHILD",
         "path": "music/Miguel Angeles/FORGOTTEN CHILD.wav",
         "lyrics": "lyrics/Miguel Angeles/FORGOTTEN CHILD.txt",
@@ -110,22 +134,6 @@
         "cover": "covers/Miguel Angeles/FORGOTTEN CHILD (SLOW Version).jpg",
         "date": "dates/Miguel Angeles/FORGOTTEN CHILD (SLOW Version).txt",
         "additionalInfo": "additional_info/Miguel Angeles/FORGOTTEN CHILD (SLOW Version).txt"
-    },
-    {
-        "name": "Miguel Angeles - Miguel Angeles - DEATH RATTLE",
-        "path": "music/Miguel Angeles/Miguel Angeles - DEATH RATTLE.wav",
-        "lyrics": "lyrics/Miguel Angeles/Miguel Angeles - DEATH RATTLE.txt",
-        "cover": "covers/Miguel Angeles/Miguel Angeles - DEATH RATTLE.jpg",
-        "date": "dates/Miguel Angeles/Miguel Angeles - DEATH RATTLE.txt",
-        "additionalInfo": "additional_info/Miguel Angeles/Miguel Angeles - DEATH RATTLE.txt"
-    },
-    {
-        "name": "Miguel Angeles - Miguel Angeles - DEATH RATTLE (SLOW Version)",
-        "path": "music/Miguel Angeles/Miguel Angeles - DEATH RATTLE (SLOW Version).wav",
-        "lyrics": "lyrics/Miguel Angeles/Miguel Angeles - DEATH RATTLE (SLOW Version).txt",
-        "cover": "covers/Miguel Angeles/Miguel Angeles - DEATH RATTLE (SLOW Version).jpg",
-        "date": "dates/Miguel Angeles/Miguel Angeles - DEATH RATTLE (SLOW Version).txt",
-        "additionalInfo": "additional_info/Miguel Angeles/Miguel Angeles - DEATH RATTLE (SLOW Version).txt"
     },
     {
         "name": "Miguel Angeles - PROTECTION CHARM",
