@@ -236,7 +236,6 @@ input[type="text"] {
 .settings-panel,
 .panel-right,
 .audio-container,
-.modal-content,
 .progress-container {
 	box-shadow: -2px 0 10px rgba(255, 255, 255, 0.5);
 	transition: box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease, right 0.3s ease;
