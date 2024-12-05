@@ -1,5 +1,5 @@
 <div align="center"><p>BETA</p><img height="130" width="500" src="banner/IMG_01.png" />
-<p>Streaming High-Quality Music throught <a href="https://github.com">GitHub</a>.</p></div>
+<p>Stream Your Music For Free.</p></div>
 
 ___
 
